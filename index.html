@@ -1,0 +1,2002 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html lang='bn' dir='ltr' b:css='false' b:defaultxmlnamespace='http://www.w3.org/1999/xhtml' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+
+  <head>
+    <b:include data='blog' name='all-head-content'/>
+    <meta charset='UTF-8'/>
+    <meta content='width=device-width, initial-scale=1.0, viewport-fit=cover' name='viewport'/>
+    <title><data:blog.pageTitle/></title>
+
+    <!-- SEO Meta Tags -->
+    <meta content='ফাহমিদার জন্য ১০টি কাব্যিক ও মায়াবী অনুভূতির সংকলন 💌' name='description'/>
+    <meta content='তোমারই আপনজন' name='author'/>
+    <meta content='ভালোবাসার চিঠি, রোমান্টিক চিঠি, ফাহমিদা, love letter, bangla love letter' name='keywords'/>
+    <meta content='index, follow, max-image-preview:large' name='robots'/>
+    <meta content='ফাহমিদার জন্য ১০টি কাব্যিক ও মায়াবী অনুভূতির সংকলন 💌' property='og:title'/>
+    <meta content='তোমারই আপনজন — একটি প্রিয়তমার নামে লেখা ভালোবাসার চিঠি 💗' property='og:description'/>
+    <meta content='website' property='og:type'/>
+<meta content='bn_BD' property='og:locale'/>
+<meta content='summary_large_image' name='twitter:card'/>
+    <meta content='#ff5fa2' name='theme-color'/>
+
+    <!-- Preconnect & Fonts -->
+    <link href='https://fonts.googleapis.com' rel='preconnect'/>
+    <link crossorigin='crossorigin' href='https://fonts.gstatic.com' rel='preconnect'/>
+    <link crossorigin='crossorigin' href='https://cdn.jsdelivr.net' rel='preconnect'/>
+
+    <link crossorigin='crossorigin' href='https://cdn.jsdelivr.net/gh/MirazMac/bengali-webfont-cdn/solaimanlipi/SolaimanLipiNormal.woff' rel='preload' type='font/woff'/>
+    <link href='https://fonts.googleapis.com/css2?family=Atma:wght@400;500;600;700&amp;display=swap' rel='stylesheet'/>
+
+    <!-- ব&#2509;লগ&#2494;র থ&#2495;ম স&#2509;ক&#2495;ন (আবশ&#2509;যক&#2496;য&#2492;) -->
+    <b:skin><![CDATA[
+      /* Blogger Theme Requirement */
+      body { margin: 0; padding: 0; }
+    ]]></b:skin>
+
+    <style type='text/css'>
+      /*<![CDATA[*/
+      /* ============================================
+         বাংলা ফন্ট — সুলাইমান লিপি (SolaimanLipi)
+         ============================================ */
+      @font-face {
+        font-family: 'SolaimanLipi';
+        src: url('https://cdn.jsdelivr.net/gh/MirazMac/bengali-webfont-cdn/solaimanlipi/SolaimanLipiNormal.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      /* ============================================
+         রঙের ভেরিয়েবল
+         ============================================ */
+      :root {
+        --pink-deep:    #d63a7a;
+        --pink-main:    #ff5fa2;
+        --pink-mid:     #ff77c8;
+        --pink-light:   #ffb3d9;
+        --pink-pale:    #ffe0f0;
+        --pink-glow:    rgba(255, 87, 171, 0.55);
+        --gold:         #ffd9a0;
+        --bangla-font:  'SolaimanLipi', 'Hind Siliguri', 'Noto Sans Bengali', 'Noto Serif Bengali', 'Nirmala UI', 'Vrinda', sans-serif;
+        --letter-font: 'Atma', 'SolaimanLipi', 'Hind Siliguri', 'Noto Sans Bengali', sans-serif;
+        --fs-card: 1rem;
+        --fs-title: 1.35rem;
+      }
+
+      * { box-sizing: border-box; }
+
+      /* ============================================
+         বেস — তারা ভরা রাতের আকাশ
+         ============================================ */
+      html {
+        min-height: 100%;
+        background-color: #0a0410;
+        background-image:
+          radial-gradient(ellipse at 16% 8%, rgba(90, 20, 60, 0.34), transparent 42%),
+          linear-gradient(160deg, #160713 0%, #0a0410 58%, #100719 100%);
+      }
+
+      /* Blogger chrome hidden (b:css='false' => no blogger css) */
+      #navbar-iframe, #navbar, .navbar, #Attribution,
+      .status-msg-wrap, .blog-feeds, .post-feeds, .post-feeds-link { display: none !important; height: 0; visibility: hidden; }
+      body {
+        margin: 0;
+        font-size: 110%;
+        font-family: var(--bangla-font);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        min-height: 100dvh;
+        padding: max(14px, env(safe-area-inset-top)) 0 max(24px, env(safe-area-inset-bottom));
+        overflow-x: hidden;
+      }
+
+      /* ============================================
+         কন্টেইনার — চিঠির মূল ফ্রেম
+         ============================================ */
+      .container {
+        position: relative;
+        z-index: 50;
+        max-width: 460px;
+        width: min(calc(100% - 20px), 460px);
+        text-align: center;
+        padding: 28px 22px;
+
+        background:
+          repeating-linear-gradient(
+            45deg, transparent, transparent 18px,
+            rgba(255, 255, 255, 0.06) 18px, rgba(255, 255, 255, 0.06) 19px
+          ),
+          linear-gradient(160deg, rgba(40, 5, 25, 0.90) 0%, rgba(20, 3, 12, 0.94) 100%);
+
+        border: 2px solid var(--pink-mid);
+        outline: 1px solid var(--pink-light);
+        outline-offset: 5px;
+        border-radius: 18px;
+
+        box-shadow:
+          0 0 0 6px rgba(255, 100, 180, 0.12),
+          0 0 40px rgba(255, 60, 160, 0.35),
+          0 8px 32px rgba(0, 0, 0, 0.6);
+      }
+
+      .deco-line {
+        position: absolute;
+        left: 18px; right: 18px;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--pink-mid), var(--pink-light), var(--pink-mid), transparent);
+      }
+      .deco-line.top    { top: 14px; }
+      .deco-line.bottom { bottom: 14px; }
+
+      .corner-deco {
+        position: absolute;
+        font-size: 20px;
+        color: var(--pink-light);
+        line-height: 1;
+        text-shadow: 0 0 8px var(--pink-main);
+      }
+      .corner-deco.top-left     { top: 6px;  left: 8px;  }
+      .corner-deco.top-right    { top: 6px;  right: 8px; transform: scaleX(-1); }
+      .corner-deco.bottom-left  { bottom: 6px; left: 8px;  transform: scaleY(-1); }
+      .corner-deco.bottom-right { bottom: 6px; right: 8px; transform: scale(-1); }
+
+      /* ============================================
+         খামের র‍্যাপার ও ভাসমান ফুল
+         ============================================ */
+      .envelope-wrapper {
+        --envelope-h: 210px;
+        position: relative;
+        width: 100%;
+        margin: 0 auto 4px;
+      }
+      .flower {
+        z-index: 199;
+        position: absolute;
+        font-size: 125%;
+        opacity: 0.85;
+        animation: flowerFloat 3s ease-in-out infinite;
+        pointer-events: none;
+      }
+      .flower.f1 { top: -10px; left:  -8px; animation-delay: 0s; }
+      .flower.f2 { top: -10px; right: -8px; animation-delay: 0.8s; }
+      .flower.f3 { bottom: 8px; left: -8px;  animation-delay: 1.6s; }
+      .flower.f4 { bottom: 8px; right: -8px; animation-delay: 2.4s; }
+
+      @keyframes flowerFloat {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50%      { transform: translateY(-6px) rotate(10deg); }
+      }
+
+      .envelope {
+        position: relative;
+        width: 100%;
+        height: var(--envelope-h);
+        background: linear-gradient(170deg, #ff77c8 0%, #ff5fa2 55%, #d63a7a 100%);
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow:
+          0 4px 20px rgba(180, 30, 100, 0.5),
+          inset 0 1px 0 rgba(255, 255, 255, 0.25),
+          inset 0 -2px 8px rgba(0, 0, 0, 0.2);
+        border: 1.5px solid rgba(255, 180, 220, 0.4);
+      }
+      .envelope-fold { position: absolute; pointer-events: none; }
+      .envelope-fold.left {
+        top: 0; left: 0; width: 0; height: 0;
+        border-style: solid; border-width: var(--envelope-h) 0 0 120px;
+        border-color: transparent transparent transparent rgba(180, 30, 100, 0.22);
+      }
+      .envelope-fold.right {
+        top: 0; right: 0; width: 0; height: 0;
+        border-style: solid; border-width: var(--envelope-h) 120px 0 0;
+        border-color: transparent rgba(255, 255, 255, 0.10) transparent transparent;
+      }
+      .envelope-fold.bottom-triangle {
+        bottom: 0; left: 0; right: 0; height: 0;
+        border-style: solid; border-width: 0 0 90px;
+        border-left-width: 50%; border-right-width: 50%;
+        border-color: transparent transparent rgba(180, 30, 100, 0.28) transparent;
+      }
+
+
+      .wax-seal {
+        position: absolute; bottom: 18px; left: 50%;
+        transform: translateX(-50%);
+        width: 42px; height: 42px;
+        background: radial-gradient(circle at 35% 35%, #ff77c8, #c0186a);
+        border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 20px; z-index: 15;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.4), inset 0 1px 2px rgba(255,200,230,0.5);
+        border: 1.5px solid rgba(255,150,200,0.5);
+      }
+
+      .flap {
+        position: absolute; top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: linear-gradient(180deg, #ffaadc 0%, #ff77c8 60%);
+        clip-path: polygon(0 0, 50% 58%, 100% 0);
+        transform-origin: top center;
+        transition: transform 2s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 20;
+        box-shadow: inset 0 -4px 12px rgba(180, 30, 100, 0.3);
+      }
+      .flap-heart {
+        position: absolute; top: 38%; left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 22px; color: rgba(255, 255, 255, 0.7);
+        text-shadow: 0 0 8px rgba(216, 176, 197, 0.8);
+        transition: opacity 0.4s ease;
+      }
+      .open .flap { transform: rotateX(180deg); }
+      .open .flap-heart { opacity: 0; }
+      .open .wax-seal { animation: sealPop 0.4s ease 1.2s both; }
+      @keyframes sealPop {
+        0%   { transform: translateX(-50%) scale(1); }
+        50%  { transform: translateX(-50%) scale(1.3); opacity: 0.5; }
+        100% { transform: translateX(-50%) scale(0); opacity: 0; }
+      }
+
+      /* ============================================
+         পাসকোড গেট — Romantic Neon Lock Screen
+         ============================================ */
+      #gate {
+        width: 100%;
+        margin-top: 4px;
+        text-align: center;
+        user-select: none;
+      }
+
+      .passcode-gate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+      }
+
+      .keypad-key {
+        position: relative;
+        width: 66px;
+        height: 66px;
+        justify-self: center;
+        border-radius: 50%;
+        border: 2px solid var(--pink-main);
+        outline: 1px solid rgba(255, 119, 200, 0.35);
+        outline-offset: 3px;
+        background:
+          radial-gradient(circle at 34% 24%, rgba(255, 255, 255, 0.22), transparent 28%),
+          radial-gradient(circle at 50% 42%, rgba(255, 119, 200, 0.16), transparent 55%),
+          linear-gradient(145deg, rgba(72, 10, 52, 0.96), rgba(18, 2, 17, 0.96));
+        color: var(--pink-light);
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-size: 1.45rem;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        box-shadow:
+          0 7px 0 rgba(103, 18, 74, 0.72),
+          0 10px 18px rgba(0, 0, 0, 0.34),
+          0 0 14px rgba(255, 51, 150, 0.30),
+          inset 0 2px 2px rgba(255, 235, 248, 0.20),
+          inset 0 -5px 8px rgba(0, 0, 0, 0.34);
+        transition: transform 0.11s ease, background 0.11s ease,
+                    box-shadow 0.11s ease, border-color 0.11s ease, filter 0.11s ease;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .keypad-key:hover {
+        transform: scale(1.05);
+        border-color: var(--pink-light);
+        box-shadow:
+          0 8px 0 rgba(103, 18, 74, 0.72),
+          0 12px 22px rgba(0, 0, 0, 0.38),
+          0 0 22px rgba(255, 51, 150, 0.50),
+          inset 0 2px 3px rgba(255, 245, 252, 0.26),
+          inset 0 -5px 9px rgba(0, 0, 0, 0.34);
+      }
+
+      .keypad-key:active {
+        transform: translateY(5px) scale(0.94);
+        background: linear-gradient(145deg, rgba(255, 77, 166, 0.30), rgba(79, 8, 52, 0.96));
+        box-shadow:
+          0 2px 0 rgba(103, 18, 74, 0.72),
+          0 4px 9px rgba(0, 0, 0, 0.30),
+          0 0 16px rgba(255, 51, 150, 0.48),
+          inset 0 3px 7px rgba(0, 0, 0, 0.30),
+          inset 0 -2px 3px rgba(255, 220, 240, 0.10);
+      }
+
+      .keypad-key.special {
+        font-size: 1.35rem;
+        color: var(--pink-pale);
+      }
+
+      .keypad-key.heart-key {
+        color: #ff7fbc;
+        text-shadow: 0 0 12px rgba(255, 95, 162, 0.8);
+      }
+
+      .slide-unlock {
+        position: relative;
+        width: 100%;
+        height: 62px;
+        border-radius: 999px;
+        border: 2px solid var(--pink-main);
+        background:
+          linear-gradient(180deg, rgba(255, 119, 200, 0.20), rgba(214, 58, 122, 0.24)),
+          rgba(40, 5, 25, 0.65);
+        box-shadow:
+          0 0 18px rgba(255, 51, 150, 0.30),
+          inset 0 1px 0 rgba(255, 220, 240, 0.16);
+        overflow: hidden;
+        touch-action: none;
+      }
+
+      .slide-unlock.ready {
+        box-shadow:
+          0 0 22px rgba(255, 51, 150, 0.50),
+          inset 0 1px 0 rgba(255, 220, 240, 0.20);
+      }
+
+      .slide-unlock.shake {
+        animation: slideShake 0.42s ease;
+      }
+
+      .slide-track-fill {
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: 0;
+        border-radius: 999px;
+        background: linear-gradient(90deg, rgba(255, 77, 166, 0.18), rgba(255, 119, 200, 0.32));
+        pointer-events: none;
+        transition: width 0.05s linear;
+      }
+
+      .slide-label {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 240, 248, 0.95);
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-size: 1.12rem;
+        font-weight: 500;
+        letter-spacing: 0.2px;
+        pointer-events: none;
+        text-shadow: 0 0 10px rgba(255, 95, 162, 0.35);
+      }
+
+      .slide-thumb {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: 1.5px solid rgba(255, 220, 240, 0.75);
+        background: radial-gradient(circle at 35% 30%, #fff8fc, #ffb3d9 52%, #ff4da6 100%);
+        color: #d63a7a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, sans-serif;
+        font-size: 1.45rem;
+        font-weight: 800;
+        cursor: grab;
+        z-index: 2;
+        transition: box-shadow 0.2s ease, transform 0.15s ease;
+        touch-action: none;
+      }
+
+      .slide-thumb:active {
+        cursor: grabbing;
+        transform: scale(0.96);
+      }
+
+      .slide-unlock:not(.ready) .slide-thumb {
+        filter: saturate(0.72);
+        opacity: 0.82;
+      }
+
+      .slide-unlock.ready .slide-thumb {
+        animation: none;
+      }
+      .slide-unlock.ready .slide-thumb::after {
+        content: ''; position: absolute; inset: 0; border-radius: 50%; pointer-events: none; z-index: -1;
+        box-shadow: 0 0 22px rgba(255,95,162,0.92), 0 0 0 6px rgba(255,95,162,0.08);
+        animation: unlockGlow 1.6s ease-in-out infinite;
+      }
+
+      .slide-unlock.unlocked .slide-thumb::after { animation: none; box-shadow: 0 0 22px rgba(255,255,255,0.9); }
+      .slide-unlock.unlocked .slide-thumb {
+        box-shadow: 0 0 22px rgba(255, 255, 255, 0.9);
+      }
+
+      @keyframes unlockGlow { 0%,100% { opacity: .62; } 50% { opacity: 1; } }
+
+      @keyframes slideShake {
+        0%, 100% { transform: translateX(0); }
+        20% { transform: translateX(-7px); }
+        40% { transform: translateX(7px); }
+        60% { transform: translateX(-5px); }
+        80% { transform: translateX(5px); }
+      }
+
+      @media (max-width: 480px) {
+        .keypad-key { width: 62px; height: 62px; font-size: 1.34rem; }
+        .keypad-key.special { font-size: 1.25rem; }
+        .slide-unlock { height: 58px; }
+        .slide-thumb { width: 44px; height: 44px; top: 5px; left: 5px; font-size: 1.3rem; }
+        .slide-label { font-size: 1rem; }
+      }
+
+      /* =====================================================================
+         💗 ১০টি Romantic Cards — Content Frame
+         ===================================================================== */
+      .content {
+        display: none;
+        width: 100%;
+        margin-top: 18px;
+        padding: 18px 12px 22px;
+        border-radius: 18px;
+        background:
+          repeating-linear-gradient(45deg, transparent, transparent 18px,
+            rgba(255,255,255,0.035) 18px, rgba(255,255,255,0.035) 19px),
+          linear-gradient(160deg, rgba(40,5,25,0.78), rgba(20,3,12,0.88));
+        border: 1.5px solid rgba(255,120,180,0.48);
+        box-shadow: 0 0 30px rgba(255,87,171,0.28), inset 0 1px 0 rgba(255,255,255,0.06);
+        text-align: center;
+        line-height: 1.8;
+      }
+
+      .love-cards-head {
+        position: relative;
+        margin: 0 2px 18px;
+        padding: 14px 10px 12px;
+        border: 1px solid rgba(255,119,200,0.38);
+        border-radius: 14px;
+        background: linear-gradient(160deg, rgba(255,95,162,0.10), rgba(30,4,22,0.42));
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 0 16px rgba(255,51,150,0.12);
+      }
+      .love-cards-head::before,
+      .love-cards-head::after {
+        content: 'ꨄ︎';
+        position: absolute;
+        color: var(--pink-light);
+        font-size: 15px;
+        line-height: 1;
+        text-shadow: 0 0 8px var(--pink-main);
+      }
+      .love-cards-head::before { top: 5px; left: 7px; }
+      .love-cards-head::after { top: 5px; right: 7px; transform: scaleX(-1); }
+      .love-cards-ornament {
+        color: var(--pink-light);
+        font-size: 12px;
+        letter-spacing: 4px;
+        opacity: .85;
+      }
+      .love-cards-title {
+        margin-top: 4px;
+        color: var(--pink-pale);
+        font-size: var(--fs-title);
+        font-weight: 700;
+        text-shadow: 0 0 18px var(--pink-glow);
+      }
+      .love-cards-subtitle {
+        margin-top: 2px;
+        color: var(--pink-light);
+        font-size: .82rem;
+        opacity: .78;
+      }
+
+      .love-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        width: 100%;
+        contain: layout style;
+      }
+
+      .love-card {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding: 19px 18px 20px;
+        text-align: left;
+        border: 1.5px solid rgba(255,119,200,0.56);
+        border-radius: 16px;
+        background:
+          linear-gradient(160deg, rgba(49,5,31,0.94), rgba(17,3,15,0.96));
+        box-shadow:
+          0 5px 14px rgba(0,0,0,0.24),
+          inset 0 1px 0 rgba(255,225,242,0.10);
+        opacity: 0;
+        transform: translate3d(0, 14px, 0);
+        transition: opacity .28s ease, transform .28s cubic-bezier(.22,.8,.25,1);
+        scroll-margin-top: 20px;
+        contain: layout paint style;
+        content-visibility: auto;
+        contain-intrinsic-size: auto 180px;
+      }
+
+      .card-corner {
+        position: absolute;
+        width: 21px;
+        height: 21px;
+        pointer-events: none;
+        opacity: .92;
+      }
+      .card-corner.tl { top: 6px; left: 6px; border-top: 1.5px solid var(--pink-light); border-left: 1.5px solid var(--pink-light); border-top-left-radius: 8px; }
+      .card-corner.tr { top: 6px; right: 6px; border-top: 1.5px solid var(--pink-light); border-right: 1.5px solid var(--pink-light); border-top-right-radius: 8px; }
+      .card-corner.bl { bottom: 6px; left: 6px; border-bottom: 1.5px solid var(--pink-light); border-left: 1.5px solid var(--pink-light); border-bottom-left-radius: 8px; }
+      .card-corner.br { bottom: 6px; right: 6px; border-bottom: 1.5px solid var(--pink-light); border-right: 1.5px solid var(--pink-light); border-bottom-right-radius: 8px; }
+      .card-corner::after {
+        content: 'ꨄ︎';
+        position: absolute;
+        font-size: 9px;
+        color: var(--pink-light);
+        text-shadow: 0 0 7px var(--pink-main);
+      }
+      .card-corner.tl::after { top: -7px; left: -4px; }
+      .card-corner.tr::after { top: -7px; right: -4px; transform: scaleX(-1); }
+      .card-corner.bl::after { bottom: -7px; left: -4px; transform: scaleY(-1); }
+      .card-corner.br::after { bottom: -7px; right: -4px; transform: scale(-1); }
+
+      .love-card.is-visible {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+
+      .love-card-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 9px;
+      }
+      .love-card-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 64px;
+        height: 28px;
+        padding: 0 10px;
+        border-radius: 999px;
+        border: 1px solid rgba(255,150,200,.48);
+        background: linear-gradient(135deg, rgba(255,77,166,.22), rgba(120,20,90,.30));
+        color: var(--gold);
+        font-size: .76rem;
+        letter-spacing: .7px;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.10), 0 0 10px rgba(255,51,150,.10);
+      }
+      .love-card-heart {
+        color: var(--pink-mid);
+        font-size: 17px;
+        text-shadow: 0 0 12px rgba(255,95,162,.65);
+      }
+      .love-card-text {
+        margin: 0;
+        color: rgba(255,235,245,.97);
+        font-family: var(--bangla-font);
+        font-size: var(--fs-card);
+        line-height: 1.8;
+        text-shadow: 0 1px 3px rgba(0,0,0,.38);
+      }
+      @media (max-width: 480px) {
+        .content { padding: 14px 9px 18px; margin-top: 16px; }
+        .love-cards { gap: 12px; }
+        .love-card { padding: 17px 15px 18px; border-radius: 15px; }
+        .love-card-text { font-size: .96rem; line-height: 1.78; }
+        .love-cards-title { font-size: 1.22rem; }
+        .letter-body { font-size: 1rem; }
+      }
+
+      /* ============================================
+         তারা ভরা আকাশ & ইফেক্ট
+         ============================================ */
+      #stars {
+        position: fixed; inset: 0; z-index: 0;
+        pointer-events: none; overflow: hidden;
+        contain: strict;
+      }
+      .star {
+        position: absolute; border-radius: 50%;
+        background: #fff;
+        box-shadow: 0 0 4px rgba(255, 255, 255, 0.45);
+        animation: twinkle var(--dur, 3s) ease-in-out infinite;
+        animation-delay: var(--delay, 0s);
+      }
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.2; }
+        50%      { opacity: 1; }
+      }
+      .shooting-star {
+        position: fixed; top: 0; left: 0; z-index: 0;
+        width: 3px; height: 3px; border-radius: 50%;
+        background: #fff; pointer-events: none;
+        box-shadow: 0 0 8px 2px rgba(255, 220, 240, 0.9);
+      }
+
+      #petals {
+        position: fixed; inset: 0; z-index: 2;
+        pointer-events: none; overflow: hidden;
+        contain: strict;
+      }
+      .petal {
+        position: absolute; top: -6vh;
+        width: 14px; height: 14px;
+        background: radial-gradient(circle at 30% 30%, #ffe0ef 0%, #ff9ccb 55%, #ff5fa2 100%);
+        border-radius: 150% 0 150% 0;
+        opacity: 0;
+        animation: petalFall linear forwards;
+      }
+      @keyframes petalFall {
+        0%   { opacity: 0; transform: translateX(0) translateY(0) rotate(0deg); }
+        10%  { opacity: var(--petal-o, 0.9); }
+        90%  { opacity: var(--petal-o, 0.8); }
+        100% { opacity: 0; transform: translateX(var(--drift, 40px)) translateY(108vh) rotate(540deg); }
+      }
+
+      .click-heart {
+        position: fixed; z-index: 9999;
+        pointer-events: none; transform: translate(-50%, -50%);
+        font-size: 20px;
+        animation: heartPop 1s ease-out forwards;
+      }
+      @keyframes heartPop {
+        0%   { opacity: 0; transform: translate(-50%, -50%) scale(0.3) rotate(0deg); }
+        18%  { opacity: 1; transform: translate(-50%, -70%) scale(1.15) rotate(-8deg); }
+        100% { opacity: 0; transform: translate(-50%, -190%) scale(0.9) rotate(8deg); }
+      }
+
+      .moon {
+        position: fixed;
+        top: 40px;
+        right: 60px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: radial-gradient(circle at 35% 35%, #fff8e8, #ffe4a0 50%, rgba(255,208,96,0.35));
+        z-index: 1;
+        pointer-events: none;
+        animation: none;
+      }
+      .moon::after {
+        content: ''; position: absolute; inset: 0; border-radius: 50%;
+        pointer-events: none; z-index: -1;
+        box-shadow: 0 0 40px 15px rgba(255,220,150,0.25), 0 0 100px 40px rgba(255,200,100,0.12);
+        animation: glowPulse 6s ease-in-out infinite;
+      }
+
+      #fireflies {
+        position: fixed; inset: 0; z-index: 1;
+        pointer-events: none; overflow: hidden;
+        contain: strict;
+      }
+      .firefly {
+        position: absolute;
+        border-radius: 50%;
+        background: #ffe89a;
+        box-shadow: 0 0 6px 2px rgba(255,232,154,0.6), 0 0 14px 4px rgba(255,200,80,0.3);
+        animation:
+          fireflyFloat var(--fly-dur, 8s) ease-in-out infinite,
+          fireflyGlow var(--glow-dur, 3s) ease-in-out infinite;
+        animation-delay: var(--fly-delay, 0s);
+      }
+      @keyframes fireflyFloat {
+        0%, 100% { transform: translate(0, 0); }
+        25%      { transform: translate(var(--fx1, 30px), var(--fy1, -20px)); }
+        50%      { transform: translate(var(--fx2, -20px), var(--fy2, 15px)); }
+        75%      { transform: translate(var(--fx3, 15px), var(--fy3, -30px)); }
+      }
+      @keyframes fireflyGlow {
+        0%, 100% { opacity: 0.15; }
+        50%      { opacity: 0.85; }
+      }
+
+      .aurora {
+        position: fixed;
+        top: -50%; left: -50%; width: 200%; height: 200%;
+        z-index: 0;
+        pointer-events: none;
+        opacity: 0.1;
+        will-change: transform;
+        background: linear-gradient(120deg,
+          transparent 30%,
+          rgba(120, 40, 180, 0.3) 42%,
+          rgba(255, 80, 160, 0.2) 50%,
+          rgba(60, 20, 120, 0.3) 58%,
+          transparent 70%);
+        background-size: 200% 200%;
+        animation: auroraShift 18s ease-in-out infinite;
+        filter: blur(50px);
+      }
+      @keyframes auroraShift {
+        0%, 100% { transform: translate3d(0, 0, 0); }
+        50%      { transform: translate3d(-16.6%, 0, 0); }
+      }
+
+      .confetti-piece {
+        position: fixed;
+        z-index: 9998;
+        pointer-events: none;
+        opacity: 0;
+        animation: confettiFall var(--conf-dur, 2.5s) ease-out forwards;
+      }
+      @keyframes confettiFall {
+        0%   { opacity: 1; transform: translate(0, 0) rotate(0deg) scale(1); }
+        100% { opacity: 0; transform: translate(var(--conf-x, 100px), var(--conf-y, 400px)) rotate(720deg) scale(0.2); }
+      }
+
+      .cursor-dot {
+        position: fixed;
+        z-index: 9997;
+        pointer-events: none;
+        border-radius: 50%;
+        background: var(--pink-main);
+        box-shadow: 0 0 8px var(--pink-glow);
+        animation: cursorFade 0.8s ease-out forwards;
+      }
+      @keyframes cursorFade {
+        0%   { opacity: 0.6; transform: scale(1); }
+        100% { opacity: 0; transform: scale(0.2); }
+      }
+
+      .love-meter-container {
+        position: fixed;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 100;
+        display: none;
+        visibility: hidden;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        opacity: 0;
+        animation: fadeUp 0.8s ease 0.3s forwards;
+      }
+      .love-meter-track {
+        width: 8px;
+        height: 120px;
+        background: rgba(255,150,200,0.12);
+        border-radius: 99px;
+        border: 1px solid rgba(255,150,200,0.2);
+        position: relative;
+        overflow: hidden;
+      }
+      .love-meter-fill {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 0%;
+        background: linear-gradient(0deg, var(--pink-deep), var(--pink-main), var(--pink-light));
+        border-radius: 99px;
+        transition: height 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 0 10px var(--pink-glow);
+      }
+      .love-meter-heart {
+        font-size: 18px;
+        animation: heartBeat 1.2s ease-in-out infinite;
+      }
+      .love-meter-pct {
+        font-size: 0.6rem;
+        color: var(--pink-light);
+        font-weight: 700;
+        opacity: 0.8;
+      }
+
+      .music-ctrl {
+        position: fixed;
+        bottom: max(20px, env(safe-area-inset-bottom));
+        right: max(20px, env(safe-area-inset-right));
+        z-index: 9000;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, rgba(255,77,166,0.9), rgba(214,58,122,0.9));
+        border: 1.5px solid rgba(255,180,220,0.4);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 2px 12px rgba(255,51,150,0.4);
+        backdrop-filter: blur(8px);
+        transition: transform 0.25s, box-shadow 0.25s;
+        font-size: 18px;
+        user-select: none;
+      }
+      .music-ctrl:hover {
+        transform: scale(1.12);
+        box-shadow: 0 4px 20px rgba(255,51,150,0.6);
+      }
+      .music-ctrl.playing {
+        animation: none;
+      }
+      .music-ctrl.playing::after {
+        content: ''; position: absolute; inset: 0; border-radius: 50%; pointer-events: none; z-index: -1;
+        box-shadow: 0 0 0 8px rgba(255,95,162,0.12); animation: musicRing 2s ease-in-out infinite;
+      }
+      @keyframes musicRing { 0%,100% { opacity: 0; } 50% { opacity: 1; } }
+
+      .music-note {
+        position: fixed;
+        z-index: 8999;
+        pointer-events: none;
+        font-size: 16px;
+        opacity: 0;
+        animation: noteFloat 2.5s ease-out forwards;
+      }
+      @keyframes noteFloat {
+        0%   { opacity: 0; transform: translate(0, 0) rotate(0deg) scale(0.5); }
+        15%  { opacity: 0.9; transform: translate(var(--note-x1, -5px), -10px) scale(1); }
+        100% { opacity: 0; transform: translate(var(--note-x2, -30px), -80px) rotate(var(--note-rot, 20deg)) scale(0.7); }
+      }
+
+      @keyframes glowPulse { 0%,100% { opacity: .6; } 50% { opacity: 1; } }
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(18px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes heartBeat {
+        0%, 100% { transform: scale(1); }
+        25%      { transform: scale(1.28); }
+        40%      { transform: scale(1.05); }
+        60%      { transform: scale(1.22); }
+      }
+
+      @media (max-width: 820px) {
+        .aurora { opacity: .035; filter: blur(22px); animation: none; }
+      }
+      @media (max-width: 480px) {
+        .container { padding: 18px 13px; }
+        .firefly { box-shadow: 0 0 5px 1px rgba(255,232,154,.35); }
+        .love-card { padding: 16px 14px 17px; }
+        .content { font-size: .96rem; }
+        .love-meter-container { right: 8px; }
+        .love-meter-track { height: 80px; width: 6px; }
+        .love-meter-heart { font-size: 14px; }
+        .moon { width: 32px; height: 32px; top: 18px; right: 18px; }
+        .music-ctrl { width: 38px; height: 38px; bottom: max(14px, env(safe-area-inset-bottom)); right: max(14px, env(safe-area-inset-right)); font-size: 15px; }
+      }
+
+      img { max-width: 100%; height: auto; display: block; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .star, .petal, .flower, .firefly, .aurora, .moon,
+        .music-ctrl.playing { animation: none !important; }
+        .cursor-dot, .confetti-piece, .music-note { display: none !important; }
+      }
+
+      /* ============================================
+         ৩×৩ SVG প্যাটার্ন লক — touch + keyboard
+         ============================================ */
+      :where(button, [role='button'], [role='slider'], [tabindex='0']):focus-visible {
+        outline: 2px solid var(--pink-light); outline-offset: 3px; }
+      .slide-unlock.is-dragging .slide-label { opacity: .18; }
+      .slide-label { transition: opacity .22s ease; }
+      .love-meter-container.show { visibility: visible; }
+
+      /* Romantic 3×3 SVG pattern lock */
+      .passcode-gate {
+        width:100%; max-width:420px; margin:0 auto; padding:clamp(16px,4vw,24px) clamp(12px,3vw,20px) 18px;
+        border:1px solid rgba(255,179,217,.32); border-radius:22px;
+        background:radial-gradient(ellipse at 50% 0%,rgba(255,95,162,.13),transparent 68%),rgba(32,6,25,.44);
+        box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 12px 32px rgba(0,0,0,.22);
+      }
+      .romantic-pattern-hint { margin:0 0 5px; color:var(--pink-pale); font-family:var(--bangla-font); font-size:1rem; font-weight:600; text-align:center; }
+      .pattern-helper { margin:0 auto 10px; max-width:28em; color:rgba(255,224,240,.74); font-size:.78rem; line-height:1.65; text-align:center; }
+      .romantic-pattern-lock { display:block; width:min(88vw,340px); height:auto; aspect-ratio:1; margin:0 auto; overflow:visible; touch-action:none; user-select:none; -webkit-user-select:none; }
+      .lock-board { fill:rgba(14,3,15,.34); stroke:rgba(255,179,217,.2); stroke-width:.8; }
+      .lock-grid-line { stroke:rgba(255,119,200,.08); stroke-width:.55; stroke-dasharray:1.2 2.4; }
+      .romantic-lock-dots circle { fill:url(#lockDotGradient); stroke:rgba(255,224,240,.48); stroke-width:1.25; filter:drop-shadow(0 0 2px rgba(255,95,162,.65)); transition:fill .15s ease,filter .15s ease; }
+      .romantic-lock-dots circle:hover { filter:drop-shadow(0 0 5px rgba(255,179,217,.95)); }
+      .romantic-lock-lines line { stroke:var(--pink-main); stroke-width:2.8; stroke-linecap:round; opacity:.95; filter:drop-shadow(0 0 2px rgba(255,95,162,.7)); }
+      .romantic-lock-actives circle { fill:rgba(255,224,240,.22); stroke:var(--pink-light); stroke-width:1.1; }
+      #romanticPatternLock.success .romantic-lock-dots circle { fill:#8fffd0; }
+      #romanticPatternLock.success .romantic-lock-lines line, #romanticPatternLock.success .romantic-lock-actives circle { stroke:#8fffd0; fill:#8fffd0; }
+      #romanticPatternLock.error .romantic-lock-dots circle, #romanticPatternLock.error .romantic-lock-actives circle { fill:#ff5d83; }
+      #romanticPatternLock.error .romantic-lock-lines line { stroke:#ff5d83; }
+      .romantic-pattern-status { min-height:34px; margin:5px 0 8px; color:var(--pink-light); font-family:var(--bangla-font); font-size:.86rem; line-height:1.5; text-align:center; }
+      @media (max-width:480px) { .romantic-pattern-lock { width:min(88vw,340px); } .romantic-pattern-hint { font-size:.95rem; } }
+
+      /* ============================================
+         🆕 চিঠি — একই টোকেন, হাতের লেখায়
+         ============================================ */
+      .letter { margin-top: 18px; }
+      .memory-ribbon { margin:1em 0 .4em; padding:.7em .8em; border:1px solid rgba(255,119,200,.42); border-radius:12px; color:var(--pink-light); background:rgba(255,95,162,.08); font-size:.92em; text-align:center; }
+      .letter-body { font-family: var(--letter-font); font-size: 1.06rem; line-height: 2.05;
+        color: rgba(255,235,245,.97); text-align: left; }
+      .letter-body p { margin: 0 0 1.15em; text-indent: 1.2em; opacity: 0; transform: translate3d(0,14px,0);
+        transition: opacity .32s ease, transform .32s cubic-bezier(.22,.8,.25,1);
+        transition-delay: calc(var(--i, 0) * 90ms); }
+      .letter-body p:first-child { text-indent: 0; }
+      .letter-body p.is-visible { opacity: 1; transform: translate3d(0,0,0); }
+      .letter-opening { color: var(--gold); font-family: var(--letter-font); font-size: 1.24rem;
+        margin: 0 0 .6em; text-indent: 0 !important; }
+      .letter-sign { margin-top: 1.4em; text-align: right; color: var(--pink-light);
+        font-family: var(--letter-font); font-size: 1.08rem; }
+      .letter-sign .letter-seal { display: block; margin-top: .5em; font-size: 1.9rem;
+        color: var(--pink-main); text-shadow: 0 0 14px var(--pink-glow);
+        animation: heartBeat 1.6s ease-in-out infinite; }
+      .letter-date { margin-top: .3em; color: var(--pink-light); opacity: .7; font-size: .82rem; }
+      .letter-fade { margin: 14px 0 4px; }
+
+      @media (max-width: 480px) {
+        .letter-body { font-size: 1rem; line-height: 1.95; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .love-card { transition: none !important; transform: none !important; opacity: 1 !important; }
+        .flap { transition: none !important; }
+        .open .wax-seal { animation: none !important; }
+        .love-meter-heart, .click-heart, .music-ctrl.playing::after,
+        .moon::after, .slide-unlock.ready .slide-thumb::after, .letter-sign .letter-seal {
+          animation: none !important; }
+        .letter-body p { transition: none !important; opacity: 1 !important; transform: none !important; }
+        .aurora { animation: none !important; }
+      }
+
+      /*]]>*/
+    
+      /* ===== Added romantic experience features (preserve original theme) ===== */
+      .envelope-caption { margin: 10px 0 18px; color: var(--pink-light); font-size: .88rem; letter-spacing: .2px; text-shadow: 0 0 12px rgba(255,95,162,.22); }
+      .envelope-caption strong { color: var(--gold); font-weight: 600; }
+      .feature-panel {
+        display: none;
+        position: relative;
+        margin-top: 24px;
+        padding: 22px 18px;
+        border: 1px solid rgba(255, 119, 200, .38);
+        border-radius: 16px;
+        background: linear-gradient(155deg, rgba(50, 9, 33, .82), rgba(17, 5, 20, .9));
+        box-shadow: 0 12px 30px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.04);
+        text-align: center;
+        overflow: hidden;
+      }
+      .feature-kicker {
+        margin: 0 0 7px;
+        color: var(--gold);
+        font-size: .78rem;
+        letter-spacing: 1.7px;
+        text-transform: uppercase;
+      }
+      .feature-title {
+        margin: 0 0 8px;
+        color: var(--pink-pale);
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+      .feature-copy {
+        margin: 0 auto 16px;
+        max-width: 34em;
+        color: rgba(255, 230, 243, .82);
+        line-height: 1.8;
+        font-size: .95rem;
+      }
+      .feature-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 42px;
+        padding: 10px 16px;
+        border: 1px solid rgba(255, 179, 217, .55);
+        border-radius: 999px;
+        background: linear-gradient(135deg, rgba(214,58,122,.95), rgba(125,30,83,.95));
+        color: #fff;
+        font: inherit;
+        font-size: .9rem;
+        cursor: pointer;
+        box-shadow: 0 5px 18px rgba(214,58,122,.18);
+        transition: transform .2s ease, filter .2s ease;
+      }
+      .feature-button:hover { filter: brightness(1.1); transform: translateY(-1px); }
+      .feature-button:focus-visible, .moment-date:focus-visible,
+      .moment-note:focus-visible, .story-volume:focus-visible {
+        outline: 2px solid var(--gold); outline-offset: 3px;
+      }
+      .moment-counter {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+        margin: 17px 0 14px;
+      }
+      .moment-unit {
+        padding: 12px 4px;
+        border: 1px solid rgba(255,179,217,.18);
+        border-radius: 12px;
+        background: rgba(255,255,255,.035);
+      }
+      .moment-number { display:block; color: var(--pink-pale); font-size:1.45rem; font-weight:700; font-variant-numeric:tabular-nums; }
+      .moment-label { display:block; margin-top:3px; color:rgba(255,220,238,.7); font-size:.76rem; }
+      .moment-date {
+        width: 100%; max-width: 240px; margin: 4px auto 10px; padding: 9px 10px;
+        border: 1px solid rgba(255,179,217,.35); border-radius: 10px;
+        background: rgba(10,4,16,.72); color: #ffe0f0; color-scheme: dark; font: inherit;
+      }
+      .moment-status { min-height:1.5em; color:var(--gold); font-size:.85rem; }
+      .story-player {
+        display:flex; align-items:center; gap:12px; text-align:left;
+        margin: 16px 0 12px; padding: 13px; border:1px solid rgba(255,179,217,.2);
+        border-radius:14px; background:rgba(255,255,255,.035);
+      }
+      .story-disc {
+        flex:0 0 54px; width:54px; height:54px; display:grid; place-items:center;
+        border:1px solid rgba(255,217,160,.65); border-radius:50%;
+        background:radial-gradient(circle, #ffd9a0 0 7%, #3b1732 8% 34%, #160b19 35% 100%);
+        color:#ffe0f0; font-size:1.25rem;
+      }
+      .story-player.is-playing .story-disc { animation: storySpin 5s linear infinite; }
+      @keyframes storySpin { to { transform:rotate(360deg); } }
+      .story-meta { min-width:0; flex:1; }
+      .story-track-title { margin:0 0 4px; color:#fff0f8; font-weight:700; }
+      .story-track-subtitle { margin:0; color:rgba(255,220,238,.65); font-size:.78rem; }
+      .story-progress { width:100%; height:4px; margin-top:10px; accent-color:var(--pink-main); }
+      .story-controls { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:9px; }
+      .story-volume { width:100%; max-width:180px; accent-color:var(--pink-main); }
+      .story-status { min-height:1.5em; margin:10px 0 0; color:var(--gold); font-size:.8rem; }
+      .final-reveal-card {
+        display:none; margin:18px 0 0; padding:20px 14px; border-radius:14px;
+        border:1px solid rgba(255,217,160,.38);
+        background:radial-gradient(ellipse at top, rgba(214,58,122,.18), transparent 65%), rgba(10,4,16,.5);
+      }
+      .final-reveal-card.is-revealed { display:block; animation: revealFade .8s ease both; }
+      .final-heart { display:block; margin:0 auto 10px; color:var(--gold); font-size:2rem; animation:finalGlow 2.4s ease-in-out infinite; }
+      .final-message { margin:0; line-height:1.95; color:#fff0f8; }
+      .final-sign { margin:14px 0 0; color:var(--pink-light); }
+      @keyframes revealFade { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+      @keyframes finalGlow { 0%,100% { text-shadow:0 0 5px rgba(255,217,160,.1); } 50% { text-shadow:0 0 20px rgba(255,217,160,.7); } }
+      @media (max-width:420px) {
+        .feature-panel { padding:18px 13px; }
+        .moment-counter { gap:5px; }
+        .moment-number { font-size:1.22rem; }
+        .story-player { gap:9px; padding:10px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .feature-button, .story-player.is-playing .story-disc, .final-heart { animation:none !important; transition:none !important; }
+      }
+
+      /* Responsive safety overrides: prevent narrow flex shrink / mobile overflow. */
+      html, body { width: 100%; min-width: 0; }
+      body {
+        box-sizing: border-box;
+        padding-left: max(10px, env(safe-area-inset-left));
+        padding-right: max(10px, env(safe-area-inset-right));
+      }
+      .container {
+        box-sizing: border-box;
+        width: 100%; /* width is constrained by the body’s safe-area gutters */
+        max-width: 460px;
+        min-width: 0;
+        flex: 0 1 460px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .envelope-wrapper, .envelope, #gate, .passcode-gate,
+      .content, .feature-panel, .story-player, .final-reveal-panel {
+        box-sizing: border-box;
+        min-width: 0;
+        max-width: 100%;
+      }
+      .romantic-pattern-lock { max-width: 100%; }
+      .container :where(img, video, iframe, canvas, svg) { max-width: 100%; }
+      .container :where(p, h1, h2, h3, a, button, label) { overflow-wrap: anywhere; }
+      /* Edge-to-edge mobile layout. The previous 460px desktop cap caused
+         large side gutters inside Telegram/WebView tablets and wide phones. */
+      @media (max-width: 820px) {
+        body {
+          box-sizing: border-box;
+          min-height: 100vh;
+          min-height: 100dvh;
+          align-items: stretch;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        .container {
+          width: calc(100vw - 20px);
+          max-width: none;
+          flex: 0 0 calc(100vw - 20px);
+          min-height: calc(100vh - 20px);
+          min-height: calc(100dvh - 20px);
+          margin-top: 0;
+          margin-bottom: 0;
+          margin-left: auto;
+          margin-right: auto;
+          /* Keep the decorative frame visible while the panel fills the screen. */
+          border: 2px solid var(--pink-mid);
+          border-radius: 18px;
+          outline: 1px solid var(--pink-light);
+          outline-offset: 5px;
+          box-shadow:
+            0 0 0 6px rgba(255, 100, 180, 0.12),
+            0 0 40px rgba(255, 60, 160, 0.35),
+            0 8px 32px rgba(0, 0, 0, 0.6);
+        }
+      }
+      @media (max-width: 480px) {
+        .container { padding: 18px 13px; }
+      }
+
+      /* Performance: keep the romantic look, remove ambient/background motion. */
+      #stars, #fireflies, #petals, .aurora, .moon, .shooting-star,
+      .star, .firefly, .petal, .cursor-dot { display: none !important; }
+      *, *::before, *::after {
+        animation-duration: .55s !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+      }
+      .flap { transition-duration: .7s !important; }
+      .keypad-key, .slide-thumb, .love-card, .feature-button {
+        transition-duration: .16s !important;
+      }
+      .click-heart, .confetti-piece, .music-note { display: none !important; }
+      .final-heart, .letter-seal, .love-meter-heart,
+      .music-ctrl.playing, .story-disc, .slide-unlock.ready .slide-thumb::after {
+        animation: none !important;
+      }
+
+      /* Post-unlock voice message and chapter-by-chapter letter */
+      #voiceExperience { display:none; width:100%; margin:20px auto 0; text-align:center; }
+      .voice-panel {
+        padding:clamp(18px, 5vw, 30px) clamp(14px, 4vw, 24px);
+        border:1px solid rgba(255,179,217,.6); border-radius:18px;
+        background:radial-gradient(ellipse at top,rgba(255,95,162,.18),transparent 70%),rgba(20,5,20,.78);
+        box-shadow:0 0 22px rgba(255,95,162,.20),inset 0 1px 0 rgba(255,255,255,.08);
+      }
+      .voice-kicker { margin:0 0 8px; color:var(--gold); font-size:.9rem; letter-spacing:.04em; }
+      .voice-title { margin:0 0 10px; color:var(--pink-pale); font-size:clamp(1.2rem,5vw,1.65rem); }
+      .voice-copy { color:#ffe8f3; line-height:1.8; margin:0 auto 18px; max-width:34em; }
+      .voice-play, .voice-next {
+        min-height:48px; padding:11px 22px; border:1px solid var(--pink-light); border-radius:999px;
+        color:#fff; background:linear-gradient(135deg,#ec4e9a,#9d245e); font:inherit; font-weight:700;
+        box-shadow:0 5px 18px rgba(255,51,150,.26); cursor:pointer;
+      }
+      .voice-play:disabled { opacity:.48; cursor:not-allowed; }
+      .voice-status { min-height:1.7em; margin:14px 0 0; color:var(--pink-light); font-size:.9rem; }
+      #voiceReading { display:none; }
+      .voice-part { display:none; margin:0; color:#fff0f7; font-size:clamp(1.05rem,4.2vw,1.22rem); line-height:2; text-align:left; white-space:pre-line; }
+      .voice-part.is-current { display:block; animation:voiceReveal .45s ease both; }
+      .voice-part-number { display:block; margin-bottom:8px; color:var(--gold); font-size:.84rem; text-align:center; }
+      .voice-progress { height:4px; margin:0 auto 18px; border-radius:9px; background:rgba(255,255,255,.14); overflow:hidden; }
+      .voice-progress-fill { width:0; height:100%; background:linear-gradient(90deg,var(--pink-main),var(--gold)); transition:width .25s ease; }
+      @keyframes voiceReveal { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+
+    </style>
+  </head>
+
+  <body>
+
+  <!-- ব&#2509;লগ&#2494;র র&#2495;ক&#2507;য&#2492;&#2494;র&#2509;ড স&#2503;কশন (হ&#2494;ইড কর&#2494;) -->
+  <div style='display:none;'>
+    <b:section id='main' showaddelement='no'/>
+  </div>
+
+  <div aria-hidden='true' class='aurora'></div>
+  <div aria-hidden='true' class='moon'></div>
+  <div aria-hidden='true' id='stars'></div>
+  <div aria-hidden='true' id='fireflies'></div>
+  <div aria-hidden='true' id='petals'></div>
+
+  <div aria-label='গান চালু বা বন্ধ করো' aria-pressed='false' class='music-ctrl' id='musicCtrl' role='button' tabindex='0'>🎵</div>
+
+  <div aria-label='প্রেমের মাত্রা ১০০ শতাংশ' class='love-meter-container' id='loveMeter' role='img'>
+    <div aria-hidden='true' class='love-meter-heart'>&#10084;&#65039;</div>
+    <div aria-hidden='true' class='love-meter-track'>
+      <div class='love-meter-fill' id='loveMeterFill'></div>
+    </div>
+    <div aria-hidden='true' class='love-meter-pct' id='loveMeterPct'>০%</div>
+  </div>
+
+  <div class='container'>
+
+    <div class='corner-deco top-left'>ꨄ&#65038;</div>
+    <div class='corner-deco top-right'>ꨄ&#65038;</div>
+    <div class='corner-deco bottom-left'>ꨄ&#65038;</div>
+    <div class='corner-deco bottom-right'>ꨄ&#65038;</div>
+    <div class='deco-line top'></div>
+    <div class='deco-line bottom'></div>
+
+    <div class='envelope-wrapper'>
+      <div class='envelope' id='envelope'>
+        <div class='envelope-fold left'></div>
+        <div class='envelope-fold right'></div>
+        <div class='envelope-fold bottom-triangle'></div>
+        <div class='wax-seal'><span>💗</span></div>
+        <div class='flap'>
+          <div class='flap-heart'>💗</div>
+        </div>
+      </div>
+      <div class='flower f1'>💙</div>
+      <div class='flower f2'>💙</div>
+      <div class='flower f3'>💙</div>
+      <div class='flower f4'>💙</div>
+    </div>
+
+    <p class='envelope-caption'><strong>A Letter for Fahmida</strong><br/>চিঠিটি খুলতে প্যাটার্ন ও স্লাইড সম্পন্ন করো</p>
+
+    <!-- ====== Romantic Passcode Lock Gate ====== -->
+    <div id='gate' role='region' aria-label='আনলক'>
+      <div class='passcode-gate' id='patternGate' role='group'>
+        <p class='romantic-pattern-hint' id='romanticPatternHint'>তোমার ভালোবাসার প্যাটার্ন আঁকো 💗</p>
+        <p class='pattern-helper'>আঙুল না তুলে অন্তত ৪টি ডট জুড়ে দাও। কিবোর্ডে দিক-তীর দিয়ে ডট বেছে Enter চাপলেও হবে।</p>
+        <svg id='romanticPatternLock' class='romantic-pattern-lock' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' role='application' aria-label='৯টি ডটের প্যাটার্ন লক' tabindex='0'>
+          <defs>
+            <radialGradient id='lockDotGradient' cx='35%' cy='30%' r='75%'>
+              <stop offset='0%' stop-color='#ffe4f2'/><stop offset='48%' stop-color='#ff8fc8'/><stop offset='100%' stop-color='#c8347d'/>
+            </radialGradient>
+          </defs>
+          <rect class='lock-board' x='4' y='4' width='92' height='92' rx='18'/>
+          <path class='lock-grid-line' d='M20 20H80 M20 50H80 M20 80H80 M20 20V80 M50 20V80 M80 20V80'/>
+          <g class='romantic-lock-actives'></g><g class='romantic-lock-lines'></g>
+          <g class='romantic-lock-dots'>
+            <circle cx='20' cy='20' r='4.2' data-index='1'/><circle cx='50' cy='20' r='4.2' data-index='2'/><circle cx='80' cy='20' r='4.2' data-index='3'/>
+            <circle cx='20' cy='50' r='4.2' data-index='4'/><circle cx='50' cy='50' r='4.2' data-index='5'/><circle cx='80' cy='50' r='4.2' data-index='6'/>
+            <circle cx='20' cy='80' r='4.2' data-index='7'/><circle cx='50' cy='80' r='4.2' data-index='8'/><circle cx='80' cy='80' r='4.2' data-index='9'/>
+          </g>
+        </svg>
+        <div class='romantic-pattern-status' id='romanticPatternStatus' role='status' aria-live='polite' aria-atomic='true'></div>
+
+        <div class='slide-unlock' id='slideUnlock'>
+          <div class='slide-track-fill' id='slideFill'></div>
+          <div class='slide-label' id='slideLabel'>Slide to Unlock</div>
+          <div aria-label='আনলক করতে ডানে সরান' aria-orientation='horizontal' aria-valuemax='100'
+               aria-valuemin='0' aria-valuenow='0' class='slide-thumb' id='slideThumb'
+               role='slider' tabindex='0'>&#187;</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Post-unlock: voice message first, then the letter in guided chapters. -->
+    <section id='voiceExperience' aria-live='polite'>
+      <div class='voice-panel' id='voiceAudioStage'>
+        <p class='voice-kicker'>শুধু তোমার জন্য · একটি কণ্ঠের চিঠি</p>
+        <h2 class='voice-title'>আগে আমার কথাগুলো শোনো</h2>
+        <p class='voice-copy'>পুরো অডিওটি শেষ না হওয়া পর্যন্ত পরের অংশ খুলবে না। মন দিয়ে শুনো—তারপর চিঠির কথাগুলো একে একে পড়তে পারবে।</p>
+        <audio id='voiceAudio' preload='metadata' src='https://raw.githubusercontent.com/Robiul3100/FAHMIDA/main/tere-age-pike-pike.mp3'></audio>
+        <button class='voice-play' id='voicePlay' type='button' disabled='disabled'>অডিওর লিংক যোগ করা হয়নি</button>
+        <p class='voice-status' id='voiceStatus' role='status' aria-live='polite'>অডিও যোগ করতে HTML-এ voiceAudio-এর src-এ তোমার আপলোড করা MP3 লিংক বসাও।</p>
+      </div>
+      <div class='voice-panel' id='voiceReading'>
+        <p class='voice-kicker'>অডিওর পর · তোমার জন্য লেখা</p>
+        <h2 class='voice-title'>যদি কথাগুলো ফাহমিদা বলতো…</h2>
+        <div class='voice-progress' aria-hidden='true'><div class='voice-progress-fill' id='voiceProgressFill'></div></div>
+        <p class='voice-part' data-part='0'><span class='voice-part-number'>প্রথম কথা</span>আমি আপনার সেই ফাহমিদা, যাকে আপনি খুঁজেছেন শত-শত মেয়ের মধ্যে। কেউ-ই আপনাকে সেই অনুভব দিতে পারেনি, যে অনুভূতি আপনি পেয়েছেন আমাকে দেখে। আমি অপরূপা সুন্দরী না হলেও আপনার চোখে আমিই অপ্সরা।</p>
+        <p class='voice-part' data-part='1'><span class='voice-part-number'>আপন ঘরের স্বপ্ন</span>আমি হয়তো আহামরি রূপের অধিকারী নই, তবুও আপনি পাবেন একজন পরিপাটি, গোছানো গৃহিণী—আপনার জীবনের রব্বাতুল বাইত, চোখের প্রশান্তি হয়ে পাশে দাঁড়ানো এক চিরসাথী।</p>
+        <p class='voice-part' data-part='2'><span class='voice-part-number'>ভালোবাসার সঙ্গে শ্রদ্ধা</span>আমি হয়তো আধুনিকতার মোড়কে মোড়া সেই মডার্ন নারী নই, তবুও আমার ভেতর খুঁজে পাবেন নব্বই দশকের মতো এক নিঃস্বার্থ, শ্রদ্ধাভাজন স্ত্রী—যিনি আপনাকে শুধু ভালোবাসবেন না, শ্রদ্ধাও করবেন।</p>
+        <p class='voice-part' data-part='3'><span class='voice-part-number'>একটি সন্তানের জন্য</span>আমি হয়তো ডিগ্রিপূর্ণ শিক্ষায় শিক্ষিত নই, তবুও আমি হতে পারি আমাদের সন্তানের একজন দায়িত্বশীল, আদর্শ মা—যার কোলে থাকবে নিরাপত্তা, আর ছায়ায় থাকবে শেখা।</p>
+        <p class='voice-part' data-part='4'><span class='voice-part-number'>হৃদয়ের ভাষা</span>আমি হয়তো মুখভর্তি শব্দ দিয়ে কারও মন জিততে পারি না, তবুও হৃদয়ের গভীরতা দিয়ে আপনাকে বলব—শুদ্ধ বাংলায়, নিঃশব্দে, ছোট্ট একটি শব্দ: “ভালোবাসি”—যা কোনো জাঁকজমকের চেয়েও অনেক বেশি সত্য।</p>
+        <p class='voice-part' data-part='5'><span class='voice-part-number'>আপনার মনের মতো</span>আমি জানি, সবার মনের মতো হতে পারব না। তবুও সর্বস্ব দিয়ে চেষ্টা করব আপনার মনের মতো হয়ে উঠতে—হয়ে উঠতে সেই “চক্ষুশীতলকারী”, যার দিকে চেয়ে আপনি বলবেন, “তোমার চোখেই জান্নাত দেখতেছি।”</p>
+        <p class='voice-part' data-part='6'><span class='voice-part-number'>প্রতিদিনের যত্ন</span>আমি হয়তো মেকআপে অভ্যস্ত নই, তবুও প্রতিদিন নিজেকে সাজিয়ে তুলব এমনভাবে, যেন আপনি আমার মধ্যেই খুঁজে পান পৃথিবীর সব সুখ। আমি হয়তো সবসময় সুস্থ থাকব না, তবুও প্রতিটি নিঃশ্বাসে চেষ্টা করব সুস্থ থাকতে—শুধু আপনার জন্য, আমাদের জন্য।</p>
+        <p class='voice-part' data-part='7'><span class='voice-part-number'>শেষ কথা</span>আমি পারফেক্ট নই, কিন্তু আপনি থাকলে পূর্ণ হয়ে উঠতে চাই। আপনার পাশে থেকে, আপনার হাতে হাত রেখে—একটুকরো পৃথিবী গড়তে চাই, যেটা শুধু আমাদের দুজনের। হ্যাঁ, আমিই আপনার সেই অপ্রত্যাশিত ভালোবাসা, অনাকাঙ্ক্ষিত কল্পনার কল্পিত ভালোবাসা, আপনার সেই অর্ধাঙ্গিনী—যার হাত একবার ধরলে মৃত্যু পর্যন্ত ছাড়বেন না বলে প্রতিজ্ঞা করেছিলেন। আপনার ফাহমিদার হাত কি কখনো ছাড়তে পারবেন?</p>
+        <button class='voice-next' id='voiceNext' type='button'>পরের অংশ</button>
+        <p class='voice-status' id='voiceReadStatus' role='status' aria-live='polite'></p>
+      </div>
+    </section>
+
+    <!-- CUSTOM CONTENT AREA: Add your own text and features here after unlock. -->
+
+  </div>
+
+  <audio id='musica' loop='loop' preload='none' src='https://raw.githubusercontent.com/Robiul3100/Fahmida-s/main/mara-kiya-mene-fir-vi.mp3'></audio>
+
+  <script type='text/javascript'>
+  (function () {
+  'use strict';
+  //<![CDATA[
+  /* =====================================================================
+     ⚙️  কনফিগ
+     ===================================================================== */
+  const CONFIG = {
+    nombre: "ফাহমিদা",
+    date: "১১ অক্টোবর ২০২৬",
+    favoriteColor: "#ff5fa2",
+    flower: "🌸",
+    memory: "তোমার হাসি—আমার প্রতিটি দিনের প্রিয় স্মৃতি",
+    pattern: "54712"
+  };
+
+  /* ═══ ✉️ চিঠি — নিজের কথা এখানে বসাও ═══ */
+  const LETTER = {
+    to: CONFIG.nombre,
+    opening: 'প্রিয়তমা,',
+    paragraphs: [
+      'তুমি জানো না, কতবার নিঃশব্দে তোমার নামটা ভেবেছি। শুধু তোমার নামটা ভাবলেই যেন গোটা দিনটা হঠাৎ হালকা হয়ে যায়।',
+      'তোমার হাসিটা আমার সবচেয়ে প্রিয় শব্দ। মনে হয়, সারা পৃথিবীর সব শব্দ এক বাকায় তোমার হাসির কাছে হারিয়ে যায়।',
+      'তুমি যখন রাগ করো, তখনও তোমাকে ভালোবাসি — কারণ সেই রাগের মধ্যেও তোমার যত্ন লেখা থাকে।',
+      'আমি জানি না ভবিষ্যৎ কী আনবে। তবে এটুকু জানি — তুমি যতদিন আমার জীবনে আছো, আমার প্রতিটি সকাল আলোকিত।',
+      'এই ছোট্ট পেজটি তোমার জন্য। এখানে যা আছে, তার সবটুকুই তোমার জন্য — আর শুধুই তোমার জন্য।'
+    ],
+    closing: 'ভালোবাসা অফুরন্ত,',
+    sign: '— তোমার ভালোবাসা',
+    date: CONFIG.date
+  };
+
+  /* =====================================================================
+     💗 ফাহমিদাকে পছন্দ করার ১০টি সংক্ষিপ্ত, কাব্যিক ও মায়াবী লাইন
+     ===================================================================== */
+  const LOVE_CARDS = [
+    { "id": 1, "text": "তোমার নামের ভেতর যেন এক শান্ত নদী বয়ে চলে, যেখানে মন জুড়িয়ে যায়।" },
+    { "id": 2, "text": "তোমার ওই কাজলকালো চোখে এমন এক মায়াবী গভীরতা আছে, যা আমাকে থমকে দেয়।" },
+    { "id": 3, "text": "তুমি যখন নরম সুরে কথা বলো, মনে হয় যেন গোধূলির বাতাসে মিষ্টি সুর বাজছে।" },
+    { "id": 4, "text": "তোমার ছোট্ট একটা হাসিতে আমার গোটা দিনের বিষণ্ণতা নিমেষেই মিলিয়ে যায়।" },
+    { "id": 5, "text": "তোমার চাহনিতে যে অমলিন সরলতা আছে, তা আমাকে নতুন করে প্রেমে ফেলে।" },
+    { "id": 6, "text": "তোমার কণ্ঠের এক চিলতে সুর যেন জাদুকরী মন্ত্রের মতো আমার মনের মেঘ তাড়িয়ে দেয়।" },
+    { "id": 7, "text": "তুমি পাশে থাকলে চারপাশের পৃথিবীটাকে খুব সহজ আর পরিচ্ছন্ন লাগে।" },
+    { "id": 8, "text": "তোমার সাথে কাটানো নীরব মুহূর্তগুলোও কোনো মহাকাব্যের ছন্দের চেয়ে কম সুন্দর নয়।" },
+    { "id": 9, "text": "হাজারো কোলাহলের মাঝেও তোমার উপস্থিতি আমার মনে গভীর প্রশান্তি বয়ে আনে।" },
+    { "id": 10, "text": "তোমার চোখের তারা দুটোতে যেন অজস্র না-বলা গল্পের আলো খেলা করে।" }
+  ];
+
+  /* =====================================================================
+     গ্লোবাল স্টেট
+     ===================================================================== */
+  let petalosTimer  = null;
+  let musicNotesTimer = null;
+
+  const ES_MOVIL = window.matchMedia('(max-width: 820px), (pointer: coarse)').matches;
+  const MENOS_MOVIMIENTO = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const NUM_ESTRELLAS   = ES_MOVIL ? 18 : 70;
+  const MAX_PETALOS     = ES_MOVIL ? 6  : 22;
+  const PETALO_INTERVALO = ES_MOVIL ? 2200 : 850;
+  const MAX_CORAZONES   = 26;
+  const NUM_FIREFLIES   = ES_MOVIL ? 3 : 15;
+
+  function aBangla(n) {
+    const m = {'0':'০','1':'১','2':'২','3':'৩','4':'৪','5':'৫','6':'৬','7':'৭','8':'৮','9':'৯'};
+    return String(n).replace(/[0-9]/g, d => m[d]);
+  }
+
+  /* =====================================================================
+     তারা ভরা আকাশ ও অ্যানিমেশন
+     ===================================================================== */
+  function generarEstrellas(cantidad) {
+    const cont = document.getElementById('stars');
+    if (!cont) return;
+    const frag = document.createDocumentFragment();
+    for (let i = 0; i < cantidad; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      const size = (Math.random() * 2 + 1).toFixed(1);
+      s.style.width = size + 'px';
+      s.style.height = size + 'px';
+      s.style.left = Math.random() * 100 + 'vw';
+      s.style.top  = Math.random() * 100 + 'vh';
+      s.style.setProperty('--dur', (Math.random() * 3 + 1.8).toFixed(2) + 's');
+      s.style.setProperty('--delay', (Math.random() * 4).toFixed(2) + 's');
+      frag.appendChild(s);
+    }
+    cont.appendChild(frag);
+  }
+
+  function lanzarEstrellaFugaz() {
+    const star = document.createElement('div');
+    star.className = 'shooting-star';
+    const startX = Math.random() * 60 + 20;
+    const startY = Math.random() * 35 + 5;
+    star.style.left = startX + 'vw';
+    star.style.top  = startY + 'vh';
+    const dist = Math.random() * 250 + 200;
+    star.animate([
+      { transform: 'translate(0,0) rotate(18deg)', opacity: 0 },
+      { transform: `translate(${dist*0.15}px, ${dist*0.1}px) rotate(18deg)`, opacity: 1, offset: 0.15 },
+      { transform: `translate(${dist}px, ${dist*0.65}px) rotate(18deg)`, opacity: 0 }
+    ], { duration: Math.random() * 700 + 800, easing: 'ease-in' });
+    document.body.appendChild(star);
+    setTimeout(() => star.remove(), 1700);
+  }
+
+  function programarEstrellasFugaces() {
+    const loop = () => {
+      lanzarEstrellaFugaz();
+      setTimeout(loop, Math.random() * 6000 + 5000);
+    };
+    setTimeout(loop, 3000);
+  }
+
+  function generarLuciernagas() {
+    if (MENOS_MOVIMIENTO) return;
+    const cont = document.getElementById('fireflies');
+    if (!cont) return;
+    const frag = document.createDocumentFragment();
+    for (let i = 0; i < NUM_FIREFLIES; i++) {
+      const f = document.createElement('div');
+      f.className = 'firefly';
+      f.style.left = Math.random() * 100 + 'vw';
+      f.style.top  = Math.random() * 100 + 'vh';
+      f.style.setProperty('--fly-dur', (Math.random() * 8 + 6) + 's');
+      f.style.setProperty('--glow-dur', (Math.random() * 3 + 2) + 's');
+      f.style.setProperty('--fly-delay', (Math.random() * 5) + 's');
+      f.style.setProperty('--fx1', (Math.random() * 80 - 40) + 'px');
+      f.style.setProperty('--fy1', (Math.random() * 80 - 40) + 'px');
+      f.style.setProperty('--fx2', (Math.random() * 80 - 40) + 'px');
+      f.style.setProperty('--fy2', (Math.random() * 80 - 40) + 'px');
+      f.style.setProperty('--fx3', (Math.random() * 80 - 40) + 'px');
+      f.style.setProperty('--fy3', (Math.random() * 80 - 40) + 'px');
+      const size = (Math.random() * 3 + 2).toFixed(1);
+      f.style.width = size + 'px';
+      f.style.height = size + 'px';
+      frag.appendChild(f);
+    }
+    cont.appendChild(frag);
+  }
+
+  function lanzarConfeti() {
+    if (MENOS_MOVIMIENTO) return;
+    if (MENOS_MOVIMIENTO) return;
+    const colors = ['#ff5fa2', '#ff77c8', '#ffb3d9', '#ffd9a0', '#fff', '#ff4da6', '#ffe0f0'];
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+    const count = ES_MOVIL ? 35 : 65;
+
+    for (let i = 0; i < count; i++) {
+      const piece = document.createElement('div');
+      piece.className = 'confetti-piece';
+      piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+      piece.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+      piece.style.left = centerX + 'px';
+      piece.style.top  = centerY + 'px';
+
+      const angle = Math.random() * Math.PI * 2;
+      const dist  = Math.random() * 280 + 80;
+      piece.style.setProperty('--conf-x', (Math.cos(angle) * dist).toFixed(0) + 'px');
+      piece.style.setProperty('--conf-y', (Math.sin(angle) * dist + Math.random() * 150).toFixed(0) + 'px');
+      piece.style.setProperty('--conf-dur', (Math.random() * 1.5 + 1.5) + 's');
+      piece.style.width  = (Math.random() * 7 + 4) + 'px';
+      piece.style.height = (Math.random() * 7 + 4) + 'px';
+
+      document.body.appendChild(piece);
+      setTimeout(() => piece.remove(), 3500);
+    }
+  }
+
+  function iniciarCursorTrail() {
+    if (ES_MOVIL || MENOS_MOVIMIENTO) return;
+    let lastTime = 0;
+    const trail = document.createElement('div');
+    trail.className = 'cursor-dot';
+    trail.style.width = trail.style.height = '5px';
+    trail.style.display = 'none';
+    document.body.appendChild(trail);
+    document.addEventListener('mousemove', (e) => {
+      const now = Date.now();
+      if (now - lastTime < 50) return;
+      lastTime = now;
+      trail.style.display = 'block';
+      trail.style.transform = 'translate(' + e.clientX + 'px,' + e.clientY + 'px) scale(' + (0.7 + Math.random() * 0.6).toFixed(2) + ')';
+      clearTimeout(trail._t);
+      trail._t = setTimeout(() => { trail.style.display = 'none'; }, 800);
+    });
+  }
+
+  function iniciarMusicCtrl() {
+    const ctrl = document.getElementById('musicCtrl');
+    const musica = document.getElementById('musica');
+    if (!ctrl || !musica) return;
+    ctrl.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); ctrl.click(); }
+    });
+    musica.addEventListener('error', () => { mostrarMusicCtrl(false); ctrl.title = 'গানটি লোড হয়নি'; });
+
+    ctrl.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (musica.paused) {
+        musica.play().then(() => mostrarMusicCtrl(true)).catch(() => {
+          mostrarMusicCtrl(false);
+          ctrl.title = 'গান চালু করা যায়নি। আবার চেষ্টা করুন।';
+        });
+      } else {
+        musica.pause();
+        mostrarMusicCtrl(false);
+      }
+    });
+  }
+
+  function mostrarMusicCtrl(playing = true) {
+    const ctrl = document.getElementById('musicCtrl');
+    if (!ctrl) return;
+    ctrl.style.display = 'flex';
+    ctrl.classList.toggle('playing', !!playing);
+    ctrl.setAttribute('aria-pressed', playing ? 'true' : 'false');
+    ctrl.innerHTML = playing ? '🎵' : '🔇';
+    if (playing) iniciarNotasFlotantes(); else detenerNotasFlotantes();
+  }
+
+  const NOTAS_EMOJI = ['🎵', '♪', '♫', '🎶', '♬'];
+  function iniciarNotasFlotantes() {
+    /* Floating music-note particles disabled; audio playback remains available. */
+    return;
+  }
+
+  function detenerNotasFlotantes() {
+    if (musicNotesTimer) { clearInterval(musicNotesTimer); musicNotesTimer = null; }
+  }
+
+  function crearPetalo() {
+    const cont = document.getElementById('petals');
+    if (!cont || cont.childElementCount >= MAX_PETALOS) return;
+    const p = document.createElement('div');
+    p.className = 'petal';
+    const size = Math.random() * 10 + 9;
+    p.style.width = size + 'px';
+    p.style.height = size + 'px';
+    p.style.left = Math.random() * 100 + 'vw';
+    p.style.setProperty('--drift', (Math.random() * 160 - 80).toFixed(0) + 'px');
+    p.style.animationDuration = (Math.random() * 6 + 7) + 's';
+      p.style.setProperty('--petal-o', (Math.random() * 0.4 + 0.5).toFixed(2));
+    cont.appendChild(p);
+    p.addEventListener('animationend', () => p.remove());
+  }
+
+  function iniciarPetalos() {
+    if (petalosTimer || MENOS_MOVIMIENTO) return;
+    petalosTimer = setInterval(crearPetalo, PETALO_INTERVALO);
+  }
+  function detenerPetalos() {
+    if (petalosTimer) { clearInterval(petalosTimer); petalosTimer = null; }
+  }
+
+  const EMOJIS_CORAZON = ['❤️','💖','💕','💗','💝','🌸','💞'];
+  function corazonEnClic(x, y) {
+    if (MENOS_MOVIMIENTO) return;
+    if (document.querySelectorAll('.click-heart').length >= MAX_CORAZONES) return;
+    const cantidad = ES_MOVIL ? 1 : (Math.floor(Math.random() * 2) + 2);
+    for (let i = 0; i < cantidad; i++) {
+      const h = document.createElement('div');
+      h.className = 'click-heart';
+      h.textContent = EMOJIS_CORAZON[Math.floor(Math.random() * EMOJIS_CORAZON.length)];
+      const offX = (Math.random() * 36 - 18);
+      h.style.left = (x + offX) + 'px';
+      h.style.top  = y + 'px';
+      h.style.fontSize = (Math.random() * 12 + 16) + 'px';
+      h.style.animationDuration = (Math.random() * 0.5 + 0.9) + 's';
+      document.body.appendChild(h);
+      h.addEventListener('animationend', () => h.remove());
+    }
+  }
+
+  /* =====================================================================
+     💗 ১০টি রোমান্টিক কার্ড রেন্ডার
+     ===================================================================== */
+  function formatCardNumber(n) { return aBangla(String(n).padStart(2, '0')); }
+
+  /* ✉️ চিঠি রেন্ডার */
+  let letterObserver = null;
+  function renderLetter() {
+    const body = document.getElementById('letterBody');
+    if (!body) return;
+    if (letterObserver) { letterObserver.disconnect(); letterObserver = null; }
+    body.replaceChildren();
+    try {
+      const mk = (tag, cls, text) => {
+        const el = document.createElement(tag);
+        if (cls) el.className = cls;
+        if (text != null) el.textContent = text;
+        return el;
+      };
+      body.appendChild(mk('p', 'letter-opening', LETTER.opening + ' ' + LETTER.to + ','));
+      LETTER.paragraphs.forEach((txt, i) => {
+        const p = mk('p', null, txt);
+        p.style.setProperty('--i', String(i + 1));
+        body.appendChild(p);
+      });
+      const sig = mk('div', 'letter-sign');
+      sig.appendChild(mk('div', null, LETTER.closing));
+      sig.appendChild(mk('div', null, LETTER.sign));
+      sig.appendChild(mk('div', 'letter-seal', '💗'));
+      sig.appendChild(mk('div', 'letter-date', LETTER.date ? aBangla(LETTER.date) : 'আজ সন্ধ্যায়'));
+      body.appendChild(sig);
+      const memory=mk('p','memory-ribbon','আমাদের স্মৃতি: '+CONFIG.memory);
+      body.appendChild(memory);
+
+      if ('IntersectionObserver' in window && !MENOS_MOVIMIENTO) {
+        letterObserver = new IntersectionObserver((entries, obs) => {
+          entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('is-visible'); obs.unobserve(en.target); } });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+        body.querySelectorAll('p').forEach(p => letterObserver.observe(p));
+      } else {
+        body.querySelectorAll('p').forEach(p => p.classList.add('is-visible'));
+      }
+    } catch (err) {
+      body.textContent = 'চিঠিটা একটু সমস্যা হয়েছে 💔';
+    }
+  }
+
+  function renderLoveCards() {
+    const body = document.getElementById('cartaBody');
+    if (!body) return;
+
+    body.innerHTML = '';
+    const fragment = document.createDocumentFragment();
+
+    LOVE_CARDS.forEach((card) => {
+      const article = document.createElement('article');
+      article.className = 'love-card';
+
+      const top = document.createElement('div');
+      top.className = 'love-card-top';
+
+      const number = document.createElement('span');
+      number.className = 'love-card-number';
+      number.textContent = `কারণ ${formatCardNumber(card.id)}`;
+
+      const heart = document.createElement('span');
+      heart.className = 'love-card-heart';
+      heart.textContent = '♥';
+      heart.setAttribute('aria-hidden', 'true');
+      article.setAttribute('aria-label', 'কারণ ' + aBangla(card.id));
+
+      top.appendChild(number);
+      top.appendChild(heart);
+
+      ['tl', 'tr', 'bl', 'br'].forEach(pos => {
+        const corner = document.createElement('span');
+        corner.className = `card-corner ${pos}`;
+        corner.setAttribute('aria-hidden', 'true');
+        article.appendChild(corner);
+      });
+
+      const paragraph = document.createElement('p');
+      paragraph.className = 'love-card-text';
+      paragraph.textContent = card.text;
+
+      article.appendChild(top);
+      article.appendChild(paragraph);
+      fragment.appendChild(article);
+    });
+
+    body.appendChild(fragment);
+
+    const cards = body.querySelectorAll('.love-card');
+    if ('IntersectionObserver' in window && !MENOS_MOVIMIENTO) {
+      let left = cards.length;
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+          if (--left <= 0) obs.disconnect();
+        });
+      }, { root: null, rootMargin: '180px 0px', threshold: 0.01 });
+      cards.forEach(card => observer.observe(card));
+    } else {
+      cards.forEach(card => card.classList.add('is-visible'));
+    }
+
+    const fill = document.getElementById('loveMeterFill');
+    const label = document.getElementById('loveMeterPct');
+    if (fill) requestAnimationFrame(() => { fill.style.height = '100%'; });
+    if (label) label.textContent = '১০০%';
+  }
+
+  /* =====================================================================
+     🔐 পাসকোড ও স্লাইডার লজিক
+     ===================================================================== */
+  let patternUnlocked = false;
+  let sliderDragging = false;
+  let lastSliderHapticStep = -1;
+  let cartaOpened = false;
+
+
+  function haptic(pattern = 8) {
+    try {
+      if (typeof navigator !== 'undefined' && typeof navigator.vibrate === 'function') navigator.vibrate(pattern);
+    } catch (_) {}
+  }
+
+  /* ── Romantic SVG 3×3 pattern lock ── */
+  function initRomanticPatternLock() {
+    const svg = document.getElementById('romanticPatternLock');
+    if (!svg) return;
+    const dots = Array.from(svg.querySelectorAll('.romantic-lock-dots circle'));
+    const lines = svg.querySelector('.romantic-lock-lines');
+    const active = svg.querySelector('.romantic-lock-actives');
+    const status = document.getElementById('romanticPatternStatus');
+    const correctPattern = CONFIG.pattern;
+    let selected = [], drawing = false, tail = null, lastPoint = null, keyboardDot = 4;
+    const point = e => { const p=svg.createSVGPoint(); p.x=e.clientX; p.y=e.clientY; return p.matrixTransform(svg.getScreenCTM().inverse()); };
+    const clear = () => { selected=[]; lines.replaceChildren(); active.replaceChildren(); tail=null; lastPoint=null; svg.classList.remove('success','error'); };
+    const choose = dot => {
+      if (!dot || selected.includes(dot)) return;
+      selected.push(dot);
+      const marker=document.createElementNS('http://www.w3.org/2000/svg','circle');
+      marker.setAttribute('cx',dot.getAttribute('cx')); marker.setAttribute('cy',dot.getAttribute('cy')); marker.setAttribute('r','7.5');
+      active.appendChild(marker);
+      if (tail) { tail.setAttribute('x2',dot.getAttribute('cx')); tail.setAttribute('y2',dot.getAttribute('cy')); }
+      tail=document.createElementNS('http://www.w3.org/2000/svg','line');
+      const cx=dot.getAttribute('cx'), cy=dot.getAttribute('cy');
+      tail.setAttribute('x1',cx); tail.setAttribute('y1',cy); tail.setAttribute('x2',cx); tail.setAttribute('y2',cy); lines.appendChild(tail);
+      haptic(12);
+    };
+    const discoverAt = p => {
+      let closest=null, distance=13;
+      dots.forEach(dot=>{
+        if(selected.includes(dot)) return;
+        const d=Math.hypot(p.x-Number(dot.getAttribute('cx')),p.y-Number(dot.getAttribute('cy')));
+        if(d<distance){distance=d;closest=dot;}
+      });
+      choose(closest);
+    };
+    const discoverSegment = p => {
+      if (!lastPoint) { discoverAt(p); lastPoint=p; return; }
+      const length=Math.hypot(p.x-lastPoint.x,p.y-lastPoint.y);
+      const steps=Math.max(1,Math.ceil(length/3));
+      for(let i=1;i<=steps;i++) discoverAt({x:lastPoint.x+(p.x-lastPoint.x)*i/steps,y:lastPoint.y+(p.y-lastPoint.y)*i/steps});
+      lastPoint=p;
+    };
+    const finish = () => {
+      if(!drawing) return; drawing=false;
+      if(tail){tail.remove();tail=null;}
+      const value=selected.map(d=>d.dataset.index).join('');
+      if(selected.length>=4 && value===correctPattern){
+        svg.classList.add('success'); if(status)status.textContent='সঠিক প্যাটার্ন! এবার নিচের স্লাইডারটি সরাও 💗';
+        haptic(24); patternUnlocked=true;
+        const slider=document.getElementById('slideUnlock');
+        if(slider) slider.classList.add('ready');
+        return;
+      }
+      svg.classList.add('error');
+      if(status) status.textContent=selected.length<4?'কমপক্ষে ৪টি ডট সংযুক্ত করুন। আবার চেষ্টা করুন।':'প্যাটার্নটি মেলেনি। আবার চেষ্টা করুন।';
+      haptic([12,35,12]);
+      setTimeout(()=>{clear();},900);
+    };
+    svg.addEventListener('pointerdown',e=>{
+      if(patternUnlocked)return; e.preventDefault(); clear(); if(status)status.textContent='';
+      drawing=true; svg.setPointerCapture(e.pointerId); discoverSegment(point(e));
+    });
+    svg.addEventListener('pointermove',e=>{
+      if(!drawing)return; e.preventDefault(); const p=point(e); discoverSegment(p);
+      if(tail){tail.setAttribute('x2',p.x);tail.setAttribute('y2',p.y);}
+    });
+    ['pointerup','pointercancel','lostpointercapture'].forEach(type=>svg.addEventListener(type,finish));
+    svg.addEventListener('keydown',e=>{
+      if(patternUnlocked)return;
+      let row=Math.floor((keyboardDot-1)/3), col=(keyboardDot-1)%3, moved=true;
+      if(e.key==='ArrowUp')row=Math.max(0,row-1);
+      else if(e.key==='ArrowDown')row=Math.min(2,row+1);
+      else if(e.key==='ArrowLeft')col=Math.max(0,col-1);
+      else if(e.key==='ArrowRight')col=Math.min(2,col+1);
+      else moved=false;
+      if(moved){ e.preventDefault(); keyboardDot=row*3+col+1; if(status)status.textContent='নির্বাচিত ডট '+aBangla(keyboardDot)+'. যোগ করতে Enter চাপুন।'; return; }
+      if(e.key==='Enter'||e.key===' '){e.preventDefault();if(!selected.length){clear();drawing=true;}choose(dots[keyboardDot-1]);if(status)status.textContent='ডট '+aBangla(keyboardDot)+' যোগ হয়েছে।';if(selected.length>=correctPattern.length)finish();return;}
+      if(e.key==='Backspace'){e.preventDefault();const remaining=selected.slice(0,-1);clear();remaining.forEach(choose);drawing=remaining.length>0;if(status)status.textContent=remaining.length?'শেষ ডটটি সরানো হয়েছে।':'প্যাটার্ন মুছে ফেলা হয়েছে।';return;}
+      if(e.key==='Escape'){e.preventDefault();clear();if(status)status.textContent='প্যাটার্ন মুছে ফেলা হয়েছে।';return;}
+      if(e.key==='Tab' && selected.length)finish();
+    });
+  }
+
+  /* ── স্লাইড টু আনলক ───────────────────────────────────────── */
+  function resetSlider() {
+    lastSliderHapticStep = -1;
+    const slider = document.getElementById('slideUnlock');
+    const thumb = document.getElementById('slideThumb');
+    const fill = document.getElementById('slideFill');
+    if (!slider || !thumb || !fill) return;
+    thumb.style.left = '5px';
+    fill.style.width = '0px';
+    thumb.setAttribute('aria-valuenow', '0');
+    slider.classList.remove('unlocked', 'is-dragging');
+    slider.classList.toggle('ready', patternUnlocked);
+  }
+
+  function completeUnlock() {
+    const slider = document.getElementById('slideUnlock');
+    const thumb = document.getElementById('slideThumb');
+    const fill = document.getElementById('slideFill');
+    if (!slider || !thumb || !fill) return;
+    if (slider.classList.contains('unlocked')) return;
+    sliderDragging = false;
+    slider.classList.remove('is-dragging');
+    haptic(12);
+    slider.classList.add('unlocked');
+    const maxLeft = Math.max(0, slider.clientWidth - thumb.offsetWidth - 10);
+    thumb.style.left = (maxLeft + 5) + 'px';
+    fill.style.width = '100%';
+    thumb.setAttribute('aria-valuenow', '100');
+    const label = document.getElementById('slideLabel');
+    if (label) label.textContent = 'Unlocked ♥';
+    setTimeout(() => abrirCarta(), 280);
+  }
+
+  function updateSliderFromClientX(clientX) {
+    if (!patternUnlocked) return;
+    const slider = document.getElementById('slideUnlock');
+    const thumb = document.getElementById('slideThumb');
+    const fill = document.getElementById('slideFill');
+    if (!slider || !thumb || !fill) return;
+    const rect = slider.getBoundingClientRect();
+    const maxLeft = Math.max(0, slider.clientWidth - thumb.offsetWidth - 10);
+    let left = clientX - rect.left - thumb.offsetWidth / 2;
+    left = Math.max(5, Math.min(left, maxLeft));
+    const progress = maxLeft === 0 ? 1 : (left - 5) / Math.max(1, maxLeft - 5);
+    thumb.style.left = left + 'px';
+    fill.style.width = Math.max(0, Math.min(100, progress * 100)) + '%';
+    sliderHaptic(progress);
+    const pct = String(Math.round(progress * 100));
+    thumb.setAttribute('aria-valuenow', pct);
+    thumb.setAttribute('aria-valuetext', aBangla(pct) + ' শতাংশ');
+    if (progress >= 0.92) completeUnlock();
+  }
+
+  function sliderHaptic(progress) {
+    const step = Math.floor(progress * 12);
+    if (step > lastSliderHapticStep && step > 0) { lastSliderHapticStep = step; haptic(5); }
+  }
+
+  let resizeT = null;
+  function initLock() {
+    initRomanticPatternLock();
+    const slider = document.getElementById('slideUnlock');
+    const thumb = document.getElementById('slideThumb');
+    if (!slider || !thumb) return;
+
+    thumb.addEventListener('pointerdown', (e) => {
+      e.preventDefault();
+      if (!patternUnlocked) { const status=document.getElementById('romanticPatternStatus'); if(status)status.textContent='আগে সঠিক প্যাটার্নটি আঁকুন।'; return; }
+      sliderDragging = true;
+      slider.classList.add('is-dragging');
+      if (thumb.setPointerCapture) thumb.setPointerCapture(e.pointerId);
+    });
+    thumb.addEventListener('pointermove', (e) => {
+      if (!sliderDragging) return;
+      updateSliderFromClientX(e.clientX);
+    });
+    const stopDragging = () => {
+      if (!sliderDragging) return;
+      sliderDragging = false;
+      slider.classList.remove('is-dragging');
+      if (!slider.classList.contains('unlocked')) { lastSliderHapticStep = -1; resetSlider(); }
+    };
+    ['pointerup', 'pointercancel', 'lostpointercapture'].forEach(t => thumb.addEventListener(t, stopDragging));
+    slider.addEventListener('click', (e) => {
+      if (e.target === thumb) return;
+      updateSliderFromClientX(e.clientX);
+    });
+    thumb.addEventListener('keydown', (e) => {
+      const cur = parseInt(thumb.getAttribute('aria-valuenow') || '0', 10);
+      const maxLeft = Math.max(1, slider.clientWidth - thumb.offsetWidth - 10);
+      if (e.key === 'ArrowRight' || e.key === 'ArrowUp') { e.preventDefault(); updateSliderFromClientX(slider.getBoundingClientRect().left + 5 + ((cur + 5) / 100) * maxLeft + thumb.offsetWidth / 2); }
+      else if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') { e.preventDefault(); updateSliderFromClientX(slider.getBoundingClientRect().left + 5 + Math.max(0, (cur - 5) / 100) * maxLeft + thumb.offsetWidth / 2); }
+      else if (e.key === 'Home') { e.preventDefault(); updateSliderFromClientX(0); }
+      else if (e.key === 'End' || e.key === 'Enter' || e.key === ' ') { e.preventDefault(); if (patternUnlocked) completeUnlock(); }
+    });
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeT);
+      resizeT = setTimeout(() => { if (!slider.classList.contains('unlocked')) resetSlider(); }, 120);
+    }, { passive: true });
+  }
+
+  function initVoiceJourney() {
+    const audio = document.getElementById('voiceAudio');
+    const play = document.getElementById('voicePlay');
+    const status = document.getElementById('voiceStatus');
+    const audioStage = document.getElementById('voiceAudioStage');
+    const reading = document.getElementById('voiceReading');
+    const next = document.getElementById('voiceNext');
+    const parts = Array.from(document.querySelectorAll('.voice-part'));
+    const progress = document.getElementById('voiceProgressFill');
+    if (!audio || !play || play.dataset.ready) return;
+    play.dataset.ready = '1';
+    let current = 0;
+    const src = audio.getAttribute('src');
+    if (src && src.trim()) {
+      audio.load();
+      play.disabled = false;
+      play.textContent = '▶ অডিও শুনুন';
+      if (status) status.textContent = 'অডিওটি শেষ না হওয়া পর্যন্ত পরের লেখা বন্ধ থাকবে।';
+    }
+    play.addEventListener('click', function () {
+      if (!audio.paused) { audio.pause(); play.textContent = '▶ আবার চালান'; return; }
+      audio.play().then(function () { play.textContent = 'Ⅱ বিরতি'; if (status) status.textContent = 'শোনা চলছে—শেষ হলে চিঠির অংশ খুলবে।'; })
+        .catch(function () { if (status) status.textContent = 'অডিও চালু করা যায়নি। লিংকটি ঠিক আছে কি না দেখো।'; });
+    });
+    audio.addEventListener('ended', function () {
+      if (audioStage) audioStage.style.display = 'none';
+      if (reading) reading.style.display = 'block';
+      showPart(0);
+      if (reading) reading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, { once: true });
+    audio.addEventListener('error', function () {
+      if (status) status.textContent = 'অডিও লোড হয়নি—MP3 লিংকটি পরীক্ষা করে আবার চেষ্টা করো।';
+    });
+    function showPart(index) {
+      parts.forEach(function (part, i) { part.classList.toggle('is-current', i === index); });
+      current = index;
+      if (progress) progress.style.width = ((index + 1) / parts.length * 100) + '%';
+      if (next) next.textContent = index === parts.length - 1 ? 'শেষ' : 'পরের অংশ';
+      const readStatus = document.getElementById('voiceReadStatus');
+      if (readStatus) readStatus.textContent = 'অংশ ' + (index + 1) + ' / ' + parts.length;
+    }
+    if (next) next.addEventListener('click', function () {
+      if (current < parts.length - 1) showPart(current + 1);
+      else {
+        next.disabled = true;
+        next.textContent = 'চিঠি শেষ 💗';
+        const readStatus = document.getElementById('voiceReadStatus');
+        if (readStatus) readStatus.textContent = 'তোমার জন্য লেখা কথাগুলো এখানেই শেষ।';
+      }
+    });
+  }
+
+  function abrirCarta() {
+    if (cartaOpened) return;
+    cartaOpened = true;
+    const gate     = document.getElementById('gate');
+    const musica   = document.getElementById('musica');
+    const envelope = document.getElementById('envelope');
+    const meter    = document.getElementById('loveMeter');
+
+    if (gate) gate.style.display = 'none';
+    const envelopeWrap = document.querySelector('.envelope-wrapper');
+    const envelopeCaption = document.querySelector('.envelope-caption');
+    const voiceExperience = document.getElementById('voiceExperience');
+    if (envelopeWrap) envelopeWrap.style.display = 'none';
+    if (envelopeCaption) envelopeCaption.style.display = 'none';
+    if (voiceExperience) voiceExperience.style.display = 'block';
+    if (envelope) envelope.classList.add('open');
+    initVoiceJourney();
+    if (meter) meter.style.display = 'none';
+
+    /* Decorative confetti disabled to keep unlock lightweight. */
+    /* Keep this stage audio-exclusive; the background song is paused/hidden. */
+    if (musica) musica.pause();
+    const musicCtrl = document.getElementById('musicCtrl');
+    if (musicCtrl) musicCtrl.style.display = 'none';
+    /* Ambient petals are disabled. */
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    /* Ambient background particles are intentionally disabled for performance. */
+    initLock();
+    iniciarMusicCtrl();
+    const root=document.documentElement;
+    if (/^#[0-9a-f]{6}$/i.test(CONFIG.favoriteColor)) {
+      const rgb=CONFIG.favoriteColor.match(/[0-9a-f]{2}/ig).map(v=>parseInt(v,16));
+      const blend=(target,ratio)=>'#'+rgb.map((v,i)=>Math.round(v*(1-ratio)+target[i]*ratio).toString(16).padStart(2,'0')).join('');
+      root.style.setProperty('--pink-main',CONFIG.favoriteColor);
+      root.style.setProperty('--pink-deep',blend([48,5,29],.28));
+      root.style.setProperty('--pink-mid',blend([255,255,255],.22));
+      root.style.setProperty('--pink-light',blend([255,255,255],.58));
+      root.style.setProperty('--pink-pale',blend([255,255,255],.82));
+      root.style.setProperty('--pink-glow',`rgba(${rgb.join(',')},.55)`);
+    }
+    document.querySelectorAll('.flower').forEach(el=>{el.textContent=CONFIG.flower;});
+    try { document.title = document.title || (CONFIG.nombre + ' — তোমার জন্য 💗'); } catch (_) {}
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) detenerNotasFlotantes();
+      else { const m = document.getElementById('musica'); if (m && !m.paused) iniciarNotasFlotantes(); }
+    });
+  });
+
+
+  //]]>
+  })();
+  </script>
+
+
+
+  <noscript>
+    <style>
+      #gate { display: none !important; }
+      #stars, #fireflies, #petals, .aurora, .moon { display: none !important; }
+    </style>
+    <div style='margin:16px 0;padding:14px;border:1px solid #ff77c8;border-radius:12px;
+         background:rgba(40,5,25,.85);color:#ffb3d9;font-size:.9rem;line-height:1.7;text-align:center'>
+      এই রোমান্টিক পেজটি সঠিকভাবে দেখতে JavaScript চালু করুন। 💗
+    </div>
+  </noscript>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a494416edd24770f',t:'MTc5MTc4ODcyMA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
