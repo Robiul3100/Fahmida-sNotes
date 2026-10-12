@@ -151,7 +151,7 @@
         --envelope-h: 210px;
         position: relative;
         width: 100%;
-        margin: 0 auto 4px;
+        margin: 0 auto;
       }
       .flower {
         z-index: 199;
@@ -246,7 +246,7 @@
          ============================================ */
       #gate {
         width: 100%;
-        margin-top: 4px;
+        margin-top: 0;
         text-align: center;
         user-select: none;
       }
@@ -891,14 +891,14 @@
       /* Romantic 3×3 SVG pattern lock */
       .passcode-gate {
         width:100%; max-width:420px; margin:0 auto; padding:clamp(16px,4vw,24px) clamp(12px,3vw,20px) 18px;
-        border:1px solid rgba(255,179,217,.32); border-radius:22px;
+        border:none; border-radius:22px;
         background:radial-gradient(ellipse at 50% 0%,rgba(255,95,162,.13),transparent 68%),rgba(32,6,25,.44);
         box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 12px 32px rgba(0,0,0,.22);
       }
       .romantic-pattern-hint { margin:0 0 5px; color:var(--pink-pale); font-family:var(--bangla-font); font-size:1rem; font-weight:600; text-align:center; }
       .pattern-helper { margin:0 auto 10px; max-width:28em; color:rgba(255,224,240,.74); font-size:.78rem; line-height:1.65; text-align:center; }
       .romantic-pattern-lock { display:block; width:min(88vw,340px); height:auto; aspect-ratio:1; margin:0 auto; overflow:visible; touch-action:none; user-select:none; -webkit-user-select:none; }
-      .lock-board { fill:rgba(14,3,15,.34); stroke:rgba(255,179,217,.2); stroke-width:.8; }
+      .lock-board { fill:rgba(14,3,15,.22); stroke:none; }
       .lock-grid-line { stroke:rgba(255,119,200,.08); stroke-width:.55; stroke-dasharray:1.2 2.4; }
       .romantic-lock-dots circle { fill:url(#lockDotGradient); stroke:rgba(255,224,240,.48); stroke-width:1.25; filter:drop-shadow(0 0 2px rgba(255,95,162,.65)); transition:fill .15s ease,filter .15s ease; }
       .romantic-lock-dots circle:hover { filter:drop-shadow(0 0 5px rgba(255,179,217,.95)); }
@@ -1148,31 +1148,101 @@
         animation: none !important;
       }
 
-      /* Post-unlock voice message and chapter-by-chapter letter */
-      #voiceExperience { display:none; width:100%; margin:20px auto 0; text-align:center; }
-      .voice-panel {
-        padding:clamp(18px, 5vw, 30px) clamp(14px, 4vw, 24px);
-        border:1px solid rgba(255,179,217,.6); border-radius:18px;
-        background:radial-gradient(ellipse at top,rgba(255,95,162,.18),transparent 70%),rgba(20,5,20,.78);
-        box-shadow:0 0 22px rgba(255,95,162,.20),inset 0 1px 0 rgba(255,255,255,.08);
+      /* Post-unlock audio: responsive 500px vinyl disc with compact controls */
+      #voiceExperience { display:none; box-sizing:border-box; width:100%; max-width:540px; min-width:0; margin:12px auto 0; text-align:center; }
+      .voice-stage { position:relative; width:100%; margin:0 auto; padding:12px 0 18px; }
+      .voice-skip { position:absolute; z-index:2; top:6px; right:8px; width:36px; height:36px; display:grid; place-items:center; border:1px solid rgba(255,179,217,.5); border-radius:50%; color:#ffe0f0; background:rgba(60,12,42,.72); font-size:1rem; cursor:pointer; box-shadow:0 0 12px rgba(255,95,162,.18); }
+      .voice-skip:hover { background:rgba(214,58,122,.82); }
+      .voice-intro { margin:8px 42px 5px; color:var(--gold); font-size:clamp(1rem,4.5vw,1.25rem); font-weight:600; }
+      .voice-instruction { margin:0 auto 15px; max-width:30em; color:rgba(255,224,240,.8); font-size:.84rem; line-height:1.65; }
+      .voice-after-note { margin:12px auto 0; color:rgba(255,224,240,.72); font-size:.78rem; line-height:1.55; }
+      .voice-bgm-start { margin:10px auto 16px; padding:9px 16px; border:1px solid rgba(255,179,217,.55); border-radius:999px; color:#fff0f7; background:rgba(100,25,67,.72); font:inherit; font-size:.86rem; cursor:pointer; }
+      .voice-disc {
+        position:relative; width:min(500px,82vw); aspect-ratio:1; margin:0 auto 18px; border-radius:50%;
+        background:radial-gradient(circle,transparent 0 9%,rgba(255,255,255,.10) 9.2% 9.5%,transparent 9.8% 17%,rgba(255,255,255,.10) 17.2% 17.5%,transparent 17.8% 28%,rgba(255,255,255,.09) 28.2% 28.5%,transparent 28.8% 41%,rgba(255,255,255,.08) 41.2% 41.5%,transparent 41.8% 55%,rgba(255,255,255,.08) 55.2% 55.5%,transparent 55.8% 68%,rgba(255,255,255,.07) 68.2% 68.5%,transparent 68.8%),radial-gradient(circle at 32% 28%,#632544 0,#25101f 38%,#100811 72%,#3d1730 100%);
+        border:1px solid rgba(255,179,217,.62); box-shadow:0 0 0 5px rgba(255,95,162,.09),0 14px 40px rgba(0,0,0,.45),0 0 28px rgba(255,95,162,.22),inset 0 0 28px rgba(255,95,162,.12);
       }
-      .voice-kicker { margin:0 0 8px; color:var(--gold); font-size:.9rem; letter-spacing:.04em; }
-      .voice-title { margin:0 0 10px; color:var(--pink-pale); font-size:clamp(1.2rem,5vw,1.65rem); }
-      .voice-copy { color:#ffe8f3; line-height:1.8; margin:0 auto 18px; max-width:34em; }
-      .voice-play, .voice-next {
-        min-height:48px; padding:11px 22px; border:1px solid var(--pink-light); border-radius:999px;
-        color:#fff; background:linear-gradient(135deg,#ec4e9a,#9d245e); font:inherit; font-weight:700;
-        box-shadow:0 5px 18px rgba(255,51,150,.26); cursor:pointer;
-      }
-      .voice-play:disabled { opacity:.48; cursor:not-allowed; }
-      .voice-status { min-height:1.7em; margin:14px 0 0; color:var(--pink-light); font-size:.9rem; }
+      .voice-disc::before { content:''; position:absolute; inset:3.5%; border:1px solid rgba(255,255,255,.12); border-radius:50%; }
+      .voice-disc::after { content:''; position:absolute; left:50%; top:50%; width:28%; aspect-ratio:1; transform:translate(-50%,-50%); border-radius:50%; background:radial-gradient(circle at 35% 30%,#ffb3d9,#d63a7a 62%,#6c1c49); border:2px solid rgba(255,224,240,.72); box-shadow:0 0 18px rgba(255,95,162,.45),inset 0 2px 8px rgba(255,255,255,.25); }
+      .voice-disc-label { position:absolute; z-index:1; left:50%; top:50%; transform:translate(-50%,-50%); color:#fff0f7; font-size:clamp(1rem,5vw,1.8rem); text-shadow:0 2px 8px #7b174d; pointer-events:none; }
+      .voice-disc.is-playing { animation:vinylSpin 5s linear infinite !important; }
+      @keyframes vinylSpin { to { transform:rotate(360deg); } }
+      .voice-controls { display:flex; align-items:center; gap:14px; width:min(500px,88vw); margin:0 auto; }
+      .voice-play { flex:0 0 52px; width:52px; height:52px; display:grid; place-items:center; border:1px solid var(--pink-light); border-radius:50%; color:#fff; background:linear-gradient(145deg,#ff77c8,#b52c70); font-size:1.15rem; box-shadow:0 4px 16px rgba(255,51,150,.3); cursor:pointer; }
+      .voice-play:disabled { opacity:.5; cursor:not-allowed; }
+      .voice-progress { flex:1; height:7px; border-radius:99px; background:rgba(255,255,255,.17); overflow:hidden; }
+      .voice-progress-fill { width:0; height:100%; border-radius:inherit; background:linear-gradient(90deg,var(--pink-main),var(--gold)); }
+      .voice-status, .voice-read-status { position:absolute!important; width:1px!important; height:1px!important; padding:0!important; margin:-1px!important; overflow:hidden!important; clip:rect(0,0,0,0)!important; white-space:nowrap!important; border:0!important; }
       #voiceReading { display:none; }
-      .voice-part { display:none; margin:0; color:#fff0f7; font-size:clamp(1.05rem,4.2vw,1.22rem); line-height:2; text-align:left; white-space:pre-line; }
-      .voice-part.is-current { display:block; animation:voiceReveal .45s ease both; }
-      .voice-part-number { display:block; margin-bottom:8px; color:var(--gold); font-size:.84rem; text-align:center; }
-      .voice-progress { height:4px; margin:0 auto 18px; border-radius:9px; background:rgba(255,255,255,.14); overflow:hidden; }
-      .voice-progress-fill { width:0; height:100%; background:linear-gradient(90deg,var(--pink-main),var(--gold)); transition:width .25s ease; }
-      @keyframes voiceReveal { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+      .voice-panel { padding:clamp(16px,4vw,26px) clamp(14px,4vw,24px); border:1px solid rgba(255,179,217,.42); border-radius:18px; background:radial-gradient(ellipse at top,rgba(255,95,162,.13),transparent 70%),rgba(20,5,20,.78); }
+      .voice-kicker { margin:0 0 8px; color:var(--gold); font-size:.9rem; }
+      .voice-title { margin:0 0 14px; color:var(--pink-pale); font-size:clamp(1.2rem,5vw,1.65rem); }
+      .voice-panel { border:0; padding:clamp(12px,3vw,20px) 0; background:transparent; box-shadow:none; }
+      .voice-part { position:relative; display:block; visibility:hidden; opacity:0; transform:translateY(22px) scale(.985); margin:0 0 18px; padding:clamp(18px,4.5vw,26px) clamp(16px,4vw,24px); border:1px solid rgba(255,155,205,.38); border-radius:18px; color:#fff0f7; font-size:clamp(1.03rem,4.2vw,1.2rem); line-height:2; text-align:left; white-space:pre-line; background:linear-gradient(145deg,rgba(92,20,57,.42),rgba(27,7,24,.86)); box-shadow:0 9px 24px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.06),0 0 18px rgba(255,95,162,.08); transition:opacity .55s ease,transform .55s cubic-bezier(.2,.75,.25,1),visibility .55s; }
+      .voice-part::before { content:'✦'; position:absolute; top:10px; right:15px; color:var(--gold); opacity:.75; font-size:1rem; }
+      .voice-part::after { content:''; position:absolute; left:16px; top:14px; width:28px; height:1px; background:linear-gradient(90deg,var(--gold),transparent); }
+      .voice-part.is-visible { visibility:visible; opacity:1; transform:translateY(0) scale(1); }
+      .voice-part-number { display:block; margin:0 0 12px; padding-bottom:9px; border-bottom:1px solid rgba(255,179,217,.16); color:var(--gold); font-size:.85rem; text-align:center; }
+      .voice-part:nth-of-type(even) { background:linear-gradient(145deg,rgba(55,15,47,.82),rgba(30,8,27,.9)); }
+      .voice-part:last-child { margin-bottom:8px; border-color:rgba(255,217,160,.48); box-shadow:0 9px 26px rgba(0,0,0,.24),0 0 20px rgba(255,217,160,.1); }
+      .answer-button { display:none; margin:20px auto 28px; padding:13px 28px; border:1px solid rgba(255,217,160,.75); border-radius:999px; color:#fff6fa; background:linear-gradient(135deg,#ff77c8,#bd3679 58%,#7c2759); font:inherit; font-weight:700; font-size:1.05rem; box-shadow:0 7px 24px rgba(255,55,146,.28),inset 0 1px 0 rgba(255,255,255,.25); cursor:pointer; }
+      .answer-button::before { content:'♡'; margin-right:9px; color:var(--gold); }
+      .answer-button:active { transform:scale(.97); }
+      #scratchStage { display:none; padding:10px 0 26px; text-align:center; }
+      .scratch-heading { margin:0 0 7px; color:var(--gold); font-size:1.3rem; }
+      .scratch-subtitle { margin:0 auto 18px; max-width:30em; color:rgba(255,224,240,.78); font-size:.88rem; line-height:1.7; }
+      .scratch-card { position:relative; width:min(420px,100%); aspect-ratio:1.68; margin:0 auto; overflow:hidden; border:1px solid rgba(255,217,160,.7); border-radius:20px; background:radial-gradient(ellipse at 50% 0%,rgba(255,255,255,.1),transparent 70%),linear-gradient(145deg,#43132f,#1d091d 70%); box-shadow:0 14px 35px rgba(0,0,0,.38),0 0 24px rgba(255,95,162,.17),inset 0 1px 0 rgba(255,255,255,.13); }
+      .scratch-message { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:9px; padding:24px; color:#fff3f8; font-size:clamp(1rem,4vw,1.2rem); font-weight:600; line-height:1.9; text-align:center; }
+      .scratch-message .scratch-heart { color:var(--gold); font-size:1.8rem; }
+      .scratch-message .scratch-sign { color:var(--pink-light); font-size:.9rem; font-weight:400; }
+      #scratchCanvas { position:absolute; inset:0; display:block; width:100%; height:100%; touch-action:none; cursor:crosshair; }
+      .scratch-card.is-revealed #scratchCanvas { opacity:0; pointer-events:none; transition:opacity .55s ease; }
+      .scratch-hint { margin:14px 0 0; color:rgba(255,224,240,.75); font-size:.82rem; }
+      .back-home-button { margin:26px auto 0; padding:8px 15px; border:1px solid rgba(255,179,217,.48); border-radius:999px; color:var(--pink-pale); background:rgba(74,17,52,.48); font:inherit; font-size:.78rem; cursor:pointer; }
+      .back-home-button:hover { background:rgba(214,58,122,.38); }
+      @media (prefers-reduced-motion:reduce) { .voice-disc.is-playing { animation:none!important; } .voice-part { transition:none; transform:none; } .scratch-card.is-revealed #scratchCanvas { transition:none; } }
+
+      /* Romantic letter-card polish: warm rose, champagne gold, soft paper glow. */
+      .voice-chapters { box-sizing:border-box; width:100%; min-width:0; }
+      .voice-part {
+        box-sizing:border-box; width:100%; max-width:100%; min-width:0;
+        padding:27px clamp(18px,5vw,30px) 25px;
+        border:2px solid var(--pink-mid);
+        outline:1px solid var(--pink-light); outline-offset:2px;
+        border-radius:18px;
+        background:
+          repeating-linear-gradient(45deg,transparent,transparent 18px,rgba(255,255,255,.035) 18px,rgba(255,255,255,.035) 19px),
+          radial-gradient(circle at 100% 0%,rgba(255,119,200,.12),transparent 38%),
+          linear-gradient(160deg,rgba(40,5,25,.96),rgba(20,3,12,.98));
+        box-shadow:0 0 0 4px rgba(255,100,180,.10),0 0 24px rgba(255,60,160,.18),0 9px 28px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,255,255,.10);
+      }
+      .voice-part::before, .voice-part::after { display:none; }
+      .voice-corner-icon {
+        position:absolute; z-index:1; color:rgba(255,179,217,.86); font-family:serif;
+        font-size:1rem; line-height:1; text-shadow:0 0 9px rgba(255,95,162,.58);
+        pointer-events:none;
+      }
+      .voice-corner-icon { display:block; }
+      .voice-corner-icon.tl { top:11px; left:13px; }
+      .voice-corner-icon.tr { top:11px; right:13px; transform:scaleX(-1); }
+      .voice-corner-icon.bl { bottom:11px; left:13px; transform:scaleY(-1); }
+      .voice-corner-icon.br { bottom:11px; right:13px; transform:scale(-1); }
+      .voice-part-number {
+        display:table; margin:0 auto 17px; padding:6px 15px;
+        border:1px solid rgba(255,217,160,.32); border-radius:999px;
+        background:linear-gradient(135deg,rgba(255,217,160,.11),rgba(255,95,162,.12));
+        color:#ffe1b6; font-size:.84rem; letter-spacing:.02em;
+        box-shadow:inset 0 1px 0 rgba(255,255,255,.08);
+      }
+      .voice-part-number::before { content:'✧  '; color:var(--pink-light); }
+      .voice-part-number::after { content:'  ✧'; color:var(--pink-light); }
+      .voice-part:nth-of-type(even) {
+        background:
+          repeating-linear-gradient(45deg,transparent,transparent 18px,rgba(255,255,255,.035) 18px,rgba(255,255,255,.035) 19px),
+          radial-gradient(circle at 0% 0%,rgba(255,217,160,.07),transparent 38%),
+          linear-gradient(160deg,rgba(40,5,25,.97),rgba(20,3,12,.98));
+      }
+      .voice-part:last-child { border-color:rgba(255,217,160,.58); border-left-color:var(--gold); }
 
     </style>
   </head>
@@ -1225,13 +1295,10 @@
       <div class='flower f4'>💙</div>
     </div>
 
-    <p class='envelope-caption'><strong>A Letter for Fahmida</strong><br/>চিঠিটি খুলতে প্যাটার্ন ও স্লাইড সম্পন্ন করো</p>
-
     <!-- ====== Romantic Passcode Lock Gate ====== -->
     <div id='gate' role='region' aria-label='আনলক'>
       <div class='passcode-gate' id='patternGate' role='group'>
         <p class='romantic-pattern-hint' id='romanticPatternHint'>তোমার ভালোবাসার প্যাটার্ন আঁকো 💗</p>
-        <p class='pattern-helper'>আঙুল না তুলে অন্তত ৪টি ডট জুড়ে দাও। কিবোর্ডে দিক-তীর দিয়ে ডট বেছে Enter চাপলেও হবে।</p>
         <svg id='romanticPatternLock' class='romantic-pattern-lock' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' role='application' aria-label='৯টি ডটের প্যাটার্ন লক' tabindex='0'>
           <defs>
             <radialGradient id='lockDotGradient' cx='35%' cy='30%' r='75%'>
@@ -1261,28 +1328,43 @@
 
     <!-- Post-unlock: voice message first, then the letter in guided chapters. -->
     <section id='voiceExperience' aria-live='polite'>
-      <div class='voice-panel' id='voiceAudioStage'>
-        <p class='voice-kicker'>শুধু তোমার জন্য · একটি কণ্ঠের চিঠি</p>
-        <h2 class='voice-title'>আগে আমার কথাগুলো শোনো</h2>
-        <p class='voice-copy'>পুরো অডিওটি শেষ না হওয়া পর্যন্ত পরের অংশ খুলবে না। মন দিয়ে শুনো—তারপর চিঠির কথাগুলো একে একে পড়তে পারবে।</p>
-        <audio id='voiceAudio' preload='metadata' src='https://raw.githubusercontent.com/Robiul3100/FAHMIDA/main/tere-age-pike-pike.mp3'></audio>
-        <button class='voice-play' id='voicePlay' type='button' disabled='disabled'>অডিওর লিংক যোগ করা হয়নি</button>
-        <p class='voice-status' id='voiceStatus' role='status' aria-live='polite'>অডিও যোগ করতে HTML-এ voiceAudio-এর src-এ তোমার আপলোড করা MP3 লিংক বসাও।</p>
+      <div class='voice-stage' id='voiceAudioStage'>
+        <button class='voice-skip' id='voiceSkip' type='button' aria-label='অডিও এড়িয়ে লেখায় যাও' title='এড়িয়ে যাও'>»</button>
+        <p class='voice-intro'>তোমার জন্য একটি কণ্ঠের চিঠি</p>
+        <p class='voice-instruction'>পুরো অডিও শুনলে চিঠির অংশগুলো খুলবে।</p>
+        <div class='voice-disc' id='voiceDisc' aria-hidden='true'><span class='voice-disc-label'>💗</span></div>
+        <div class='voice-controls'>
+          <button class='voice-play' id='voicePlay' type='button' aria-label='অডিও চালু বা বিরতি' title='চালু / বিরতি'>▶</button>
+          <div class='voice-progress' aria-label='অডিওর অগ্রগতি'><div class='voice-progress-fill' id='voiceAudioProgress'></div></div>
+        </div>
+        <p class='voice-after-note'>শোনা শেষ হলে তোমার জন্য লেখা কথাগুলো নিচে একে একে দেখাবে।</p>
+        <p class='voice-status' id='voiceStatus' role='status' aria-live='polite'></p>
       </div>
+      <audio id='voiceAudio' preload='auto' data-bgm-src='https://raw.githubusercontent.com/Robiul3100/Fahmida-sNotes/main/aha-aha-aaa.mp3' src='https://cdn.jsdelivr.net/gh/Robiul3100/Fahmida-sNotes@main/love-u-so-much-Fahmida.mp3'></audio>
+      <button class='voice-bgm-start' id='voiceBgmStart' type='button' style='display:none'>♫ BGM চালু করুন</button>
       <div class='voice-panel' id='voiceReading'>
         <p class='voice-kicker'>অডিওর পর · তোমার জন্য লেখা</p>
         <h2 class='voice-title'>যদি কথাগুলো ফাহমিদা বলতো…</h2>
-        <div class='voice-progress' aria-hidden='true'><div class='voice-progress-fill' id='voiceProgressFill'></div></div>
-        <p class='voice-part' data-part='0'><span class='voice-part-number'>প্রথম কথা</span>আমি আপনার সেই ফাহমিদা, যাকে আপনি খুঁজেছেন শত-শত মেয়ের মধ্যে। কেউ-ই আপনাকে সেই অনুভব দিতে পারেনি, যে অনুভূতি আপনি পেয়েছেন আমাকে দেখে। আমি অপরূপা সুন্দরী না হলেও আপনার চোখে আমিই অপ্সরা।</p>
-        <p class='voice-part' data-part='1'><span class='voice-part-number'>আপন ঘরের স্বপ্ন</span>আমি হয়তো আহামরি রূপের অধিকারী নই, তবুও আপনি পাবেন একজন পরিপাটি, গোছানো গৃহিণী—আপনার জীবনের রব্বাতুল বাইত, চোখের প্রশান্তি হয়ে পাশে দাঁড়ানো এক চিরসাথী।</p>
-        <p class='voice-part' data-part='2'><span class='voice-part-number'>ভালোবাসার সঙ্গে শ্রদ্ধা</span>আমি হয়তো আধুনিকতার মোড়কে মোড়া সেই মডার্ন নারী নই, তবুও আমার ভেতর খুঁজে পাবেন নব্বই দশকের মতো এক নিঃস্বার্থ, শ্রদ্ধাভাজন স্ত্রী—যিনি আপনাকে শুধু ভালোবাসবেন না, শ্রদ্ধাও করবেন।</p>
-        <p class='voice-part' data-part='3'><span class='voice-part-number'>একটি সন্তানের জন্য</span>আমি হয়তো ডিগ্রিপূর্ণ শিক্ষায় শিক্ষিত নই, তবুও আমি হতে পারি আমাদের সন্তানের একজন দায়িত্বশীল, আদর্শ মা—যার কোলে থাকবে নিরাপত্তা, আর ছায়ায় থাকবে শেখা।</p>
-        <p class='voice-part' data-part='4'><span class='voice-part-number'>হৃদয়ের ভাষা</span>আমি হয়তো মুখভর্তি শব্দ দিয়ে কারও মন জিততে পারি না, তবুও হৃদয়ের গভীরতা দিয়ে আপনাকে বলব—শুদ্ধ বাংলায়, নিঃশব্দে, ছোট্ট একটি শব্দ: “ভালোবাসি”—যা কোনো জাঁকজমকের চেয়েও অনেক বেশি সত্য।</p>
-        <p class='voice-part' data-part='5'><span class='voice-part-number'>আপনার মনের মতো</span>আমি জানি, সবার মনের মতো হতে পারব না। তবুও সর্বস্ব দিয়ে চেষ্টা করব আপনার মনের মতো হয়ে উঠতে—হয়ে উঠতে সেই “চক্ষুশীতলকারী”, যার দিকে চেয়ে আপনি বলবেন, “তোমার চোখেই জান্নাত দেখতেছি।”</p>
-        <p class='voice-part' data-part='6'><span class='voice-part-number'>প্রতিদিনের যত্ন</span>আমি হয়তো মেকআপে অভ্যস্ত নই, তবুও প্রতিদিন নিজেকে সাজিয়ে তুলব এমনভাবে, যেন আপনি আমার মধ্যেই খুঁজে পান পৃথিবীর সব সুখ। আমি হয়তো সবসময় সুস্থ থাকব না, তবুও প্রতিটি নিঃশ্বাসে চেষ্টা করব সুস্থ থাকতে—শুধু আপনার জন্য, আমাদের জন্য।</p>
-        <p class='voice-part' data-part='7'><span class='voice-part-number'>শেষ কথা</span>আমি পারফেক্ট নই, কিন্তু আপনি থাকলে পূর্ণ হয়ে উঠতে চাই। আপনার পাশে থেকে, আপনার হাতে হাত রেখে—একটুকরো পৃথিবী গড়তে চাই, যেটা শুধু আমাদের দুজনের। হ্যাঁ, আমিই আপনার সেই অপ্রত্যাশিত ভালোবাসা, অনাকাঙ্ক্ষিত কল্পনার কল্পিত ভালোবাসা, আপনার সেই অর্ধাঙ্গিনী—যার হাত একবার ধরলে মৃত্যু পর্যন্ত ছাড়বেন না বলে প্রতিজ্ঞা করেছিলেন। আপনার ফাহমিদার হাত কি কখনো ছাড়তে পারবেন?</p>
-        <button class='voice-next' id='voiceNext' type='button'>পরের অংশ</button>
-        <p class='voice-status' id='voiceReadStatus' role='status' aria-live='polite'></p>
+        <div class='voice-chapters' id='voiceChapters'>
+        <p class='voice-part' data-part='0'><span class='voice-corner-icon tl' aria-hidden='true'>ꨄ︎</span><span class='voice-corner-icon tr' aria-hidden='true'>ꨄ︎</span><span class='voice-corner-icon bl' aria-hidden='true'>ꨄ︎</span><span class='voice-corner-icon br' aria-hidden='true'>ꨄ︎</span><span class='voice-part-number'>প্রথম কথা</span>আমি আপনার সেই ফাহমিদা, যাকে আপনি খুঁজেছেন শত-শত মেয়ের মধ্যে। কেউ-ই আপনাকে সেই অনুভব দিতে পারেনি, যে অনুভূতি আপনি পেয়েছেন আমাকে দেখে। আমি অপরূপা সুন্দরী না হলেও আপনার চোখে আমিই অপ্সরা।</p>
+        <p class='voice-part' data-part='1'><span class='voice-corner-icon tl' aria-hidden='true'>ꨄ︎</span><span class='voice-corner-icon tr' aria-hidden='true'>ꨄ︎</span><span class='voice-corner-icon bl' aria-hidden='true'>ꨄ︎</span><span class='voice-corner-icon br' aria-hidden='true'>ꨄ︎</span><span class='voice-part-number'>আপন ঘরের স্বপ্ন</span>আমি হয়তো আহামরি রূপের অধিকারী নই, তবুও আপনি পাবেন একজন পরিপাটি, গোছানো গৃহিণী—আপনার জীবনের রব্বাতুল বাইত, চোখের প্রশান্তি হয়ে পাশে দাঁড়ানো এক চিরসাথী।</p>
+        <p class='voice-part' data-part='2'><span class='voice-corner-icon tl' aria-hidden='true'>ꨄ︎</span><span class='voice-corner-icon tr' aria-hidden='true'>ꨄ︎</span><span class='voice-corner-icon bl' aria-hidden='true'>ꨄ︎</span><span class='voice-corner-icon br' aria-hidden='true'>ꨄ︎</span><span class='voice-part-number'>ভালোবাসার সঙ্গে শ্রদ্ধা</span>আমি হয়তো আধুনিকতার মোড়কে মোড়া সেই মডার্ন নারী নই, তবুও আমার ভেতর খুঁজে পাবেন নব্বই দশকের মতো এক নিঃস্বার্থ, শ্রদ্ধাভাজন স্ত্রী—যিনি আপনাকে শুধু ভালোবাসবেন না, শ্রদ্ধাও করবেন।</p>
+        <p class='voice-part' data-part='3'><span class='voice-corner-icon tl' aria-hidden='true'>ꨄ︎</span><span class='voice-corner-icon tr' aria-hidden='true'>ꨄ︎</span><span class='voice-corner-icon bl' aria-hidden='true'>ꨄ︎</span><span class='voice-corner-icon br' aria-hidden='true'>ꨄ︎</span><span class='voice-part-number'>একটি সন্তানের জন্য</span>আমি হয়তো ডিগ্রিপূর্ণ শিক্ষায় শিক্ষিত নই, তবুও আমি হতে পারি আমাদের সন্তানের একজন দায়িত্বশীল, আদর্শ মা—যার কোলে থাকবে নিরাপত্তা, আর ছায়ায় থাকবে শেখা।</p>
+        <p class='voice-part' data-part='4'><span class='voice-corner-icon tl' aria-hidden='true'>ꨄ︎</span><span class='voice-corner-icon tr' aria-hidden='true'>ꨄ︎</span><span class='voice-corner-icon bl' aria-hidden='true'>ꨄ︎</span><span class='voice-corner-icon br' aria-hidden='true'>ꨄ︎</span><span class='voice-part-number'>হৃদয়ের ভাষা</span>আমি হয়তো মুখভর্তি শব্দ দিয়ে কারও মন জিততে পারি না, তবুও হৃদয়ের গভীরতা দিয়ে আপনাকে বলব—শুদ্ধ বাংলায়, নিঃশব্দে, ছোট্ট একটি শব্দ: “ভালোবাসি”—যা কোনো জাঁকজমকের চেয়েও অনেক বেশি সত্য।</p>
+        <p class='voice-part' data-part='5'><span class='voice-corner-icon tl' aria-hidden='true'>ꨄ︎</span><span class='voice-corner-icon tr' aria-hidden='true'>ꨄ︎</span><span class='voice-corner-icon bl' aria-hidden='true'>ꨄ︎</span><span class='voice-corner-icon br' aria-hidden='true'>ꨄ︎</span><span class='voice-part-number'>আপনার মনের মতো</span>আমি জানি, সবার মনের মতো হতে পারব না। তবুও সর্বস্ব দিয়ে চেষ্টা করব আপনার মনের মতো হয়ে উঠতে—হয়ে উঠতে সেই “চক্ষুশীতলকারী”, যার দিকে চেয়ে আপনি বলবেন, “তোমার চোখেই জান্নাত দেখতেছি।”</p>
+        <p class='voice-part' data-part='6'><span class='voice-corner-icon tl' aria-hidden='true'>ꨄ︎</span><span class='voice-corner-icon tr' aria-hidden='true'>ꨄ︎</span><span class='voice-corner-icon bl' aria-hidden='true'>ꨄ︎</span><span class='voice-corner-icon br' aria-hidden='true'>ꨄ︎</span><span class='voice-part-number'>প্রতিদিনের যত্ন</span>আমি হয়তো মেকআপে অভ্যস্ত নই, তবুও প্রতিদিন নিজেকে সাজিয়ে তুলব এমনভাবে, যেন আপনি আমার মধ্যেই খুঁজে পান পৃথিবীর সব সুখ। আমি হয়তো সবসময় সুস্থ থাকব না, তবুও প্রতিটি নিঃশ্বাসে চেষ্টা করব সুস্থ থাকতে—শুধু আপনার জন্য, আমাদের জন্য।</p>
+        <p class='voice-part' data-part='7'><span class='voice-corner-icon tl' aria-hidden='true'>ꨄ︎</span><span class='voice-corner-icon tr' aria-hidden='true'>ꨄ︎</span><span class='voice-corner-icon bl' aria-hidden='true'>ꨄ︎</span><span class='voice-corner-icon br' aria-hidden='true'>ꨄ︎</span><span class='voice-part-number'>শেষ কথা</span>আমি পারফেক্ট নই, কিন্তু আপনি থাকলে পূর্ণ হয়ে উঠতে চাই। আপনার পাশে থেকে, আপনার হাতে হাত রেখে—একটুকরো পৃথিবী গড়তে চাই, যেটা শুধু আমাদের দুজনের। হ্যাঁ, আমিই আপনার সেই অপ্রত্যাশিত ভালোবাসা, অনাকাঙ্ক্ষিত কল্পনার কল্পিত ভালোবাসা, আপনার সেই অর্ধাঙ্গিনী—যার হাত একবার ধরলে মৃত্যু পর্যন্ত ছাড়বেন না বলে প্রতিজ্ঞা করেছিলেন। আপনার ফাহমিদার হাত কি কখনো ছাড়তে পারবেন?</p>
+        </div>
+        <button class='answer-button' id='answerButton' type='button'>আমার উত্তর</button>
+        <section id='scratchStage' aria-label='গোপন উত্তর স্ক্র্যাচ কার্ড'>
+          <h2 class='scratch-heading'>তোমার প্রশ্নে আমার উত্তর</h2>
+          
+          <div class='scratch-card' id='scratchCard'>
+            <div class='scratch-message'><span class='scratch-heart'>♡</span><span>না, ফাহমিদা—তোমার হাত ছাড়ার কথা ভাবতেও পারি না। তোমার পাশে থেকে, তোমার হাত ধরে, আমাদের ছোট্ট পৃথিবীটা ভালোবাসা আর সম্মানে গড়ে তুলতে চাই।</span><span class='scratch-sign'>— তোমার রবিউল</span><span class='scratch-heart'>💗</span></div>
+            <canvas id='scratchCanvas' aria-label='গোপন বার্তা দেখতে রুপালি আবরণ ঘষে সরাও'></canvas>
+          </div>
+          <button class='back-home-button' id='backHomeButton' type='button' style='display:none'>Back to home</button>
+        </section>
       </div>
     </section>
 
@@ -1807,7 +1889,7 @@
     thumb.setAttribute('aria-valuenow', '100');
     const label = document.getElementById('slideLabel');
     if (label) label.textContent = 'Unlocked ♥';
-    setTimeout(() => abrirCarta(), 280);
+    abrirCarta();
   }
 
   function updateSliderFromClientX(clientX) {
@@ -1878,56 +1960,198 @@
     }, { passive: true });
   }
 
+  function initScratchCard() {
+    const canvas = document.getElementById('scratchCanvas');
+    const card = document.getElementById('scratchCard');
+    const hint = document.getElementById('scratchHint');
+    const backHome = document.getElementById('backHomeButton');
+    if (!canvas || !card || canvas.dataset.ready) return;
+    canvas.dataset.ready = '1';
+    const ctx = canvas.getContext('2d', { willReadFrequently: true });
+    if (!ctx) return;
+    let drawing = false, last = null, moveCount = 0, lastBuzz = 0, revealed = false;
+    function paintCover() {
+      if (revealed) return;
+      const rect = canvas.getBoundingClientRect();
+      if (!rect.width || !rect.height) return;
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.round(rect.width * dpr);
+      canvas.height = Math.round(rect.height * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const w = rect.width, h = rect.height;
+      const silver = ctx.createLinearGradient(0, 0, w, h);
+      silver.addColorStop(0, '#f1f0ed'); silver.addColorStop(.16, '#9e9da1');
+      silver.addColorStop(.34, '#e7e5e1'); silver.addColorStop(.52, '#85848a');
+      silver.addColorStop(.7, '#d8d7d4'); silver.addColorStop(.86, '#96959a');
+      silver.addColorStop(1, '#eeece8');
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.fillStyle = silver; ctx.fillRect(0, 0, w, h);
+      ctx.save(); ctx.globalAlpha = .2; ctx.strokeStyle = '#fff'; ctx.lineWidth = 1;
+      for (let x = -h; x < w + h; x += 13) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x + h, h); ctx.stroke(); }
+      ctx.restore();
+      // Fine metallic flecks make the overlay feel like a real scratch surface.
+      for (let i = 0; i < 150; i++) {
+        ctx.fillStyle = i % 2 ? 'rgba(255,255,255,.45)' : 'rgba(45,40,50,.18)';
+        const x = Math.random() * w, y = Math.random() * h, r = Math.random() * 1.15 + .25;
+        ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
+      }
+      ctx.fillStyle = 'rgba(47,34,47,.68)'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.font = '600 17px sans-serif'; ctx.fillText('ঘষে দেখো  ✨', w / 2, h / 2);
+      ctx.font = '12px sans-serif'; ctx.fillText('A LITTLE SECRET FOR YOU', w / 2, h / 2 + 26);
+    }
+    function point(e) { const r = canvas.getBoundingClientRect(); return { x:e.clientX-r.left, y:e.clientY-r.top }; }
+    function erase(a, b) {
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.lineWidth = 38; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+      ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+      ctx.beginPath(); ctx.arc(b.x, b.y, 19, 0, Math.PI * 2); ctx.fill();
+    }
+    function checkProgress() {
+      if (!canvas.width || !canvas.height) return;
+      const pixels = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+      let cleared = 0, total = 0;
+      // Sparse alpha sampling is enough to estimate erased area without slowing touch input.
+      for (let i = 3; i < pixels.length; i += 192) { total++; if (pixels[i] < 24) cleared++; }
+      if (total && cleared / total >= .56) {
+        revealed = true; drawing = false;
+        canvas.style.transition = 'opacity .48s ease';
+        canvas.style.opacity = '0'; canvas.style.pointerEvents = 'none';
+        card.classList.add('is-revealed');
+        if (hint) hint.style.display = 'none';
+        if (backHome) backHome.style.display = 'inline-flex';
+        if (navigator.vibrate) { try { navigator.vibrate([18,35,25]); } catch (_) {} }
+        window.setTimeout(function () { ctx.clearRect(0, 0, canvas.width, canvas.height); canvas.hidden = true; }, 520);
+      }
+    }
+    canvas.addEventListener('pointerdown', function (e) {
+      if (revealed) return;
+      e.preventDefault(); drawing = true; last = point(e);
+      if (canvas.setPointerCapture) canvas.setPointerCapture(e.pointerId);
+      erase(last, last);
+      if (navigator.vibrate) { try { navigator.vibrate(8); } catch (_) {} }
+    });
+    canvas.addEventListener('pointermove', function (e) {
+      if (!drawing || revealed) return;
+      e.preventDefault(); const p = point(e); erase(last || p, p); last = p; moveCount++;
+      const now = Date.now();
+      if (now - lastBuzz > 110 && navigator.vibrate) { lastBuzz = now; try { navigator.vibrate(6); } catch (_) {} }
+      if (moveCount % 8 === 0) checkProgress();
+    });
+    function stop() { drawing = false; last = null; checkProgress(); }
+    ['pointerup','pointercancel','lostpointercapture'].forEach(function (name) { canvas.addEventListener(name, stop); });
+    window.addEventListener('resize', function () { if (!revealed) paintCover(); }, { passive:true });
+    if (backHome) backHome.addEventListener('click', function () { window.location.reload(); });
+    requestAnimationFrame(paintCover);
+  }
+
   function initVoiceJourney() {
     const audio = document.getElementById('voiceAudio');
+    const bgmSrc = audio && audio.getAttribute('data-bgm-src');
+    const bgmStart = document.getElementById('voiceBgmStart');
     const play = document.getElementById('voicePlay');
     const status = document.getElementById('voiceStatus');
     const audioStage = document.getElementById('voiceAudioStage');
     const reading = document.getElementById('voiceReading');
-    const next = document.getElementById('voiceNext');
+    const skip = document.getElementById('voiceSkip');
     const parts = Array.from(document.querySelectorAll('.voice-part'));
-    const progress = document.getElementById('voiceProgressFill');
+    const audioProgress = document.getElementById('voiceAudioProgress');
+    const disc = document.getElementById('voiceDisc');
+    const answerButton = document.getElementById('answerButton');
+    const scratchStage = document.getElementById('scratchStage');
+    const chaptersWrap = document.getElementById('voiceChapters');
     if (!audio || !play || play.dataset.ready) return;
     play.dataset.ready = '1';
     let current = 0;
     const src = audio.getAttribute('src');
-    if (src && src.trim()) {
+    if (src && src.trim()) play.disabled = false;
+    let bgmStarted = false;
+    function startBgm() {
+      if (bgmStarted || !bgmSrc) return;
+      bgmStarted = true;
+      audio.pause();
+      audio.loop = true;
+      audio.src = bgmSrc;
       audio.load();
-      play.disabled = false;
-      play.textContent = '▶ অডিও শুনুন';
-      if (status) status.textContent = 'অডিওটি শেষ না হওয়া পর্যন্ত পরের লেখা বন্ধ থাকবে।';
+      audio.play().then(function () {
+        if (bgmStart) bgmStart.style.display = 'none';
+      }).catch(function () {
+        if (bgmStart) bgmStart.style.display = 'inline-flex';
+      });
+    }
+    if (bgmStart) bgmStart.addEventListener('click', function () {
+      audio.loop = true;
+      if (audio.getAttribute('src') !== bgmSrc) { audio.src = bgmSrc; audio.load(); }
+      audio.play().then(function () { bgmStarted = true; bgmStart.style.display = 'none'; }).catch(function () {});
+    });
+    function syncAudioUI() {
+      const playing = !audio.paused && !audio.ended;
+      if (disc) disc.classList.toggle('is-playing', playing);
+      play.textContent = playing ? 'Ⅱ' : '▶';
+      play.setAttribute('aria-label', playing ? 'অডিও বিরতি দিন' : 'অডিও চালু করুন');
+      if (audioProgress && Number.isFinite(audio.duration) && audio.duration > 0) {
+        audioProgress.style.width = Math.min(100, audio.currentTime / audio.duration * 100) + '%';
+      }
     }
     play.addEventListener('click', function () {
-      if (!audio.paused) { audio.pause(); play.textContent = '▶ আবার চালান'; return; }
-      audio.play().then(function () { play.textContent = 'Ⅱ বিরতি'; if (status) status.textContent = 'শোনা চলছে—শেষ হলে চিঠির অংশ খুলবে।'; })
-        .catch(function () { if (status) status.textContent = 'অডিও চালু করা যায়নি। লিংকটি ঠিক আছে কি না দেখো।'; });
+      if (!audio.paused) { audio.pause(); return; }
+      audio.play().catch(function () { if (status) status.textContent = 'অডিও চালু করা যায়নি—লিংক পরীক্ষা করুন।'; });
     });
-    audio.addEventListener('ended', function () {
+    audio.addEventListener('play', syncAudioUI);
+    audio.addEventListener('pause', syncAudioUI);
+    audio.addEventListener('timeupdate', syncAudioUI);
+    let readingShown = false;
+    function revealReading(wasSkipped) {
+      if (readingShown) return;
+      readingShown = true;
+      if (wasSkipped && !audio.ended) audio.pause();
+      startBgm();
       if (audioStage) audioStage.style.display = 'none';
       if (reading) reading.style.display = 'block';
-      showPart(0);
+      revealChapters();
       if (reading) reading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    if (skip) skip.addEventListener('click', function () { revealReading(true); });
+    audio.addEventListener('ended', function () {
+      revealReading(false);
     }, { once: true });
     audio.addEventListener('error', function () {
       if (status) status.textContent = 'অডিও লোড হয়নি—MP3 লিংকটি পরীক্ষা করে আবার চেষ্টা করো।';
     });
-    function showPart(index) {
-      parts.forEach(function (part, i) { part.classList.toggle('is-current', i === index); });
-      current = index;
-      if (progress) progress.style.width = ((index + 1) / parts.length * 100) + '%';
-      if (next) next.textContent = index === parts.length - 1 ? 'শেষ' : 'পরের অংশ';
-      const readStatus = document.getElementById('voiceReadStatus');
-      if (readStatus) readStatus.textContent = 'অংশ ' + (index + 1) + ' / ' + parts.length;
-    }
-    if (next) next.addEventListener('click', function () {
-      if (current < parts.length - 1) showPart(current + 1);
-      else {
-        next.disabled = true;
-        next.textContent = 'চিঠি শেষ 💗';
-        const readStatus = document.getElementById('voiceReadStatus');
-        if (readStatus) readStatus.textContent = 'তোমার জন্য লেখা কথাগুলো এখানেই শেষ।';
+    function revealChapters() {
+      const chapters = document.getElementById('voiceChapters');
+      if (!chapters) return;
+      if (!('IntersectionObserver' in window)) {
+        parts.forEach(function (part) { part.classList.add('is-visible'); });
+        if (answerButton) answerButton.style.display = 'inline-flex';
+        return;
       }
+      const observer = new IntersectionObserver(function (entries, obs) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            if (entry.target.dataset.part === '7' && answerButton) answerButton.style.display = 'inline-flex';
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { root:null, rootMargin:'0px 0px -12% 0px', threshold:0.12 });
+      parts.forEach(function (part) { observer.observe(part); });
+    }
+    if (answerButton) answerButton.addEventListener('click', function () {
+      if (chaptersWrap) chaptersWrap.style.display = 'none';
+      const kicker = reading && reading.querySelector('.voice-kicker');
+      const title = reading && reading.querySelector('.voice-title');
+      if (kicker) kicker.style.display = 'none';
+      if (title) title.style.display = 'none';
+      answerButton.style.display = 'none';
+      if (scratchStage) scratchStage.style.display = 'block';
+      initScratchCard();
+      if (scratchStage) scratchStage.scrollIntoView({ behavior:'smooth', block:'start' });
     });
+    if (src && src.trim()) {
+      audio.play().catch(function () {
+        if (status) status.textContent = 'স্বয়ংক্রিয়ভাবে চালু হয়নি—প্লে বোতামে চাপ দিন।';
+      });
+    }
   }
 
   function abrirCarta() {
@@ -1998,5 +2222,5 @@
       এই রোমান্টিক পেজটি সঠিকভাবে দেখতে JavaScript চালু করুন। 💗
     </div>
   </noscript>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a494416edd24770f',t:'MTc5MTc4ODcyMA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a495a54d28d50fc4',t:'MTc5MTgwMzI5Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
